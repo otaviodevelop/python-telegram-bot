@@ -47,7 +47,7 @@ class DictPersistence(BasePersistence[dict[Any, Any], dict[Any, Any], dict[Any, 
 
     .. seealso:: :wiki:`Making Your Bot Persistent <Making-your-bot-persistent>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         The parameters and attributes ``store_*_data`` were replaced by :attr:`store_data`.
 
     Args:
@@ -71,7 +71,7 @@ class DictPersistence(BasePersistence[dict[Any, Any], dict[Any, Any], dict[Any, 
             the persistence in regular intervals. This parameter specifies the time (in seconds) to
             wait between two consecutive runs of updating the persistence. Defaults to 60 seconds.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     Attributes:
         store_data (:class:`~telegram.ext.PersistenceInput`): Specifies which kinds of data will
             be saved by this persistence instance.
@@ -368,7 +368,7 @@ class DictPersistence(BasePersistence[dict[Any, Any], dict[Any, Any], dict[Any, 
     async def drop_chat_data(self, chat_id: int) -> None:
         """Will delete the specified key from the :attr:`chat_data`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int`): The chat id to delete from the persistence.
@@ -381,7 +381,7 @@ class DictPersistence(BasePersistence[dict[Any, Any], dict[Any, Any], dict[Any, 
     async def drop_user_data(self, user_id: int) -> None:
         """Will delete the specified key from the :attr:`user_data`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             user_id (:obj:`int`): The user id to delete from the persistence.
@@ -415,7 +415,7 @@ class DictPersistence(BasePersistence[dict[Any, Any], dict[Any, Any], dict[Any, 
     async def flush(self) -> None:
         """Does nothing.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         .. seealso:: :meth:`telegram.ext.BasePersistence.flush`
         """
 

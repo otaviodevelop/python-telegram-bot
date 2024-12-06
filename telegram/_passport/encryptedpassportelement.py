@@ -65,7 +65,7 @@ class EncryptedPassportElement(TelegramObject):
             "bank_statement", "rental_agreement", "passport_registration" and
             "temporary_registration" types.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         front_side (:class:`telegram.PassportFile`, optional): Encrypted/decrypted file with the
@@ -83,7 +83,7 @@ class EncryptedPassportElement(TelegramObject):
             "internal_passport", "utility_bill", "bank_statement", "rental_agreement",
             "passport_registration" and "temporary_registration" types.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
     Attributes:
@@ -106,7 +106,7 @@ class EncryptedPassportElement(TelegramObject):
             "bank_statement", "rental_agreement", "passport_registration" and
             "temporary_registration" types.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|
@@ -126,7 +126,7 @@ class EncryptedPassportElement(TelegramObject):
             "internal_passport", "utility_bill", "bank_statement", "rental_agreement",
             "passport_registration" and "temporary_registration" types.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|

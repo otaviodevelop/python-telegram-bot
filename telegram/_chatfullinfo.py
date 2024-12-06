@@ -72,13 +72,13 @@ class ChatFullInfo(_ChatBase):
         is_forum (:obj:`bool`, optional): :obj:`True`, if the supergroup chat is a forum
             (has topics_ enabled).
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         photo (:class:`telegram.ChatPhoto`, optional): Chat photo.
         active_usernames (Sequence[:obj:`str`], optional):  If set, the list of all `active chat
             usernames <https://telegram.org/blog/topics-in-groups-collectible-usernames\
             #collectible-usernames>`_; for private chats, supergroups and channels.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         birthdate (:class:`telegram.Birthdate`, optional): For private chats,
             the date of birth of the user.
 
@@ -120,7 +120,7 @@ class ChatFullInfo(_ChatBase):
         emoji_status_custom_emoji_id (:obj:`str`, optional): Custom emoji identifier of emoji
             status of the chat or the other party in a private chat.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         emoji_status_expiration_date (:class:`datetime.datetime`, optional): Expiration date of
             emoji status of the chat or the other party in a private chat, as a datetime object,
             if any.
@@ -138,16 +138,16 @@ class ChatFullInfo(_ChatBase):
             privacy settings of the other party restrict sending voice and video note messages
             in the private chat.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         join_to_send_messages (:obj:`bool`, optional): :obj:`True`, if users need to join the
             supergroup before they can send messages.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         join_by_request (:obj:`bool`, optional): :obj:`True`, if all users directly joining the
             supergroup without using an invite link need to be approved by supergroup
             administrators.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         description (:obj:`str`, optional): Description, for groups, supergroups and channel chats.
         invite_link (:obj:`str`, optional): Primary invite link, for groups, supergroups and
             channel.
@@ -170,11 +170,11 @@ class ChatFullInfo(_ChatBase):
             anti-spam checks are enabled in the supergroup. The field is only available to chat
             administrators.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         has_hidden_members (:obj:`bool`, optional): :obj:`True`, if non-administrators can only
             get the list of bots and administrators in the chat.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         has_protected_content (:obj:`bool`, optional): :obj:`True`, if messages from the chat can't
             be forwarded to other chats.
 
@@ -223,7 +223,7 @@ class ChatFullInfo(_ChatBase):
         is_forum (:obj:`bool`, optional): :obj:`True`, if the supergroup chat is a forum
             (has topics_ enabled).
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         photo (:class:`telegram.ChatPhoto`): Optional. Chat photo.
         active_usernames (tuple[:obj:`str`]): Optional. If set, the list of all `active chat
             usernames <https://telegram.org/blog/topics-in-groups-collectible-usernames\
@@ -232,7 +232,7 @@ class ChatFullInfo(_ChatBase):
             This list is empty if the chat has no active usernames or this chat instance was not
             obtained via :meth:`~telegram.Bot.get_chat`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         birthdate (:class:`telegram.Birthdate`): Optional. For private chats,
             the date of birth of the user.
 
@@ -274,7 +274,7 @@ class ChatFullInfo(_ChatBase):
         emoji_status_custom_emoji_id (:obj:`str`): Optional. Custom emoji identifier of emoji
             status of the chat or the other party in a private chat.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         emoji_status_expiration_date (:class:`datetime.datetime`): Optional. Expiration date of
             emoji status of the chat or the other party in a private chat, as a datetime object,
             if any.
@@ -292,16 +292,16 @@ class ChatFullInfo(_ChatBase):
             privacy settings of the other party restrict sending voice and video note messages
             in the private chat.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         join_to_send_messages (:obj:`bool`): Optional. :obj:`True`, if users need to join
             the supergroup before they can send messages.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         join_by_request (:obj:`bool`): Optional. :obj:`True`, if all users directly joining the
             supergroup without using an invite link need to be approved by supergroup
             administrators.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         description (:obj:`str`): Optional. Description, for groups, supergroups and channel chats.
         invite_link (:obj:`str`): Optional. Primary invite link, for groups, supergroups and
             channel.
@@ -324,11 +324,11 @@ class ChatFullInfo(_ChatBase):
             anti-spam checks are enabled in the supergroup. The field is only available to chat
             administrators.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         has_hidden_members (:obj:`bool`): Optional. :obj:`True`, if non-administrators can only
             get the list of bots and administrators in the chat.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         has_protected_content (:obj:`bool`): Optional. :obj:`True`, if messages from the chat can't
             be forwarded to other chats.
 

@@ -70,7 +70,7 @@ class JobQueue(Generic[CCT]):
     .. seealso:: :wiki:`Architecture Overview <Architecture>`,
         :wiki:`Job Queue <Extensions---JobQueue>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         To use this class, PTB must be installed via
         ``pip install "python-telegram-bot[job-queue]"``.
 
@@ -88,7 +88,7 @@ class JobQueue(Generic[CCT]):
                 :meth:`~apscheduler.schedulers.base.BaseScheduler.add_jobstore` to avoid using
                 :meth:`~apscheduler.schedulers.base.BaseScheduler.configure` altogether.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 Uses :class:`~apscheduler.schedulers.asyncio.AsyncIOScheduler` instead of
                 :class:`~apscheduler.schedulers.background.BackgroundScheduler`
 
@@ -280,18 +280,18 @@ class JobQueue(Generic[CCT]):
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.chat_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             user_id (:obj:`int`, optional): User id of the user associated with this job. If
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.user_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             data (:obj:`object`, optional): Additional data needed for the callback function.
                 Can be accessed through :attr:`Job.data` in the callback. Defaults to
                 :obj:`None`.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     Renamed the parameter ``context`` to :paramref:`data`.
             name (:obj:`str`, optional): The name of the new job. Defaults to
                 :external:attr:`callback.__name__ <definition.__name__>`.
@@ -398,7 +398,7 @@ class JobQueue(Generic[CCT]):
                 Can be accessed through :attr:`Job.data` in the callback. Defaults to
                 :obj:`None`.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     Renamed the parameter ``context`` to :paramref:`data`.
             name (:obj:`str`, optional): The name of the new job. Defaults to
                 :external:attr:`callback.__name__ <definition.__name__>`.
@@ -406,13 +406,13 @@ class JobQueue(Generic[CCT]):
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.chat_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             user_id (:obj:`int`, optional): User id of the user associated with this job. If
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.user_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             job_kwargs (:obj:`dict`, optional): Arbitrary keyword arguments to pass to the
                 :meth:`apscheduler.schedulers.base.BaseScheduler.add_job()`.
 
@@ -463,7 +463,7 @@ class JobQueue(Generic[CCT]):
     ) -> "Job[CCT]":
         """Creates a new :class:`Job` that runs on a monthly basis and adds it to the queue.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             The ``day_is_strict`` argument was removed. Instead one can now pass ``-1`` to the
             :paramref:`day` parameter to have the job run on the last day of the month.
 
@@ -484,7 +484,7 @@ class JobQueue(Generic[CCT]):
                 Can be accessed through :attr:`Job.data` in the callback. Defaults to
                 :obj:`None`.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     Renamed the parameter ``context`` to :paramref:`data`.
             name (:obj:`str`, optional): The name of the new job. Defaults to
                 :external:attr:`callback.__name__ <definition.__name__>`.
@@ -492,13 +492,13 @@ class JobQueue(Generic[CCT]):
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.chat_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             user_id (:obj:`int`, optional): User id of the user associated with this job. If
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.user_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             job_kwargs (:obj:`dict`, optional): Arbitrary keyword arguments to pass to the
                 :meth:`apscheduler.schedulers.base.BaseScheduler.add_job()`.
 
@@ -560,14 +560,14 @@ class JobQueue(Generic[CCT]):
                 run (where ``0-6`` correspond to sunday - saturday). By default, the job will run
                 every day.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     Changed day of the week mapping of 0-6 from monday-sunday to sunday-saturday.
 
             data (:obj:`object`, optional): Additional data needed for the callback function.
                 Can be accessed through :attr:`Job.data` in the callback. Defaults to
                 :obj:`None`.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     Renamed the parameter ``context`` to :paramref:`data`.
             name (:obj:`str`, optional): The name of the new job. Defaults to
                 :external:attr:`callback.__name__ <definition.__name__>`.
@@ -575,13 +575,13 @@ class JobQueue(Generic[CCT]):
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.chat_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             user_id (:obj:`int`, optional): User id of the user associated with this job. If
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.user_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             job_kwargs (:obj:`dict`, optional): Arbitrary keyword arguments to pass to the
                 :meth:`apscheduler.schedulers.base.BaseScheduler.add_job()`.
 
@@ -635,7 +635,7 @@ class JobQueue(Generic[CCT]):
                 Can be accessed through :attr:`Job.data` in the callback. Defaults to
                 :obj:`None`.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     Renamed the parameter ``context`` to :paramref:`data`.
             name (:obj:`str`, optional): The name of the new job. Defaults to
                 :external:attr:`callback.__name__ <definition.__name__>`.
@@ -643,13 +643,13 @@ class JobQueue(Generic[CCT]):
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.chat_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             user_id (:obj:`int`, optional): User id of the user associated with this job. If
                 passed, the corresponding :attr:`~telegram.ext.CallbackContext.user_data` will
                 be available in the callback.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
         Returns:
             :class:`telegram.ext.Job`: The new :class:`Job` instance that has been added to the job
@@ -740,7 +740,7 @@ class Job(Generic[CCT]):
 
     .. seealso:: :wiki:`Job Queue <Extensions---JobQueue>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
        * Removed argument and attribute ``job_queue``.
        * Renamed ``Job.context`` to :attr:`Job.data`.
@@ -761,10 +761,10 @@ class Job(Generic[CCT]):
             :external:obj:`callback.__name__ <definition.__name__>`.
         chat_id (:obj:`int`, optional): Chat id of the chat that this job is associated with.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         user_id (:obj:`int`, optional): User id of the user that this job is associated with.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     Attributes:
         callback (:term:`coroutine function`): The callback function that should be executed by the
             new job.
@@ -772,10 +772,10 @@ class Job(Generic[CCT]):
         name (:obj:`str`): Optional. The name of the new job.
         chat_id (:obj:`int`): Optional. Chat id of the chat that this job is associated with.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         user_id (:obj:`int`): Optional. User id of the user that this job is associated with.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     """
 
     __slots__ = (
@@ -880,7 +880,7 @@ class Job(Generic[CCT]):
     def job(self) -> "APSJob":
         """:class:`apscheduler.job.Job`: The APS Job this job is a wrapper for.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             This property is now read-only.
         """
         return self._job
@@ -943,7 +943,7 @@ class Job(Generic[CCT]):
         """Executes the callback function independently of the jobs schedule. Also calls
         :meth:`telegram.ext.Application.update_persistence`.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Calls :meth:`telegram.ext.Application.update_persistence`.
 
         Args:

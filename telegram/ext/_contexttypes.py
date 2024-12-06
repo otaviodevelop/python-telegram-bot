@@ -69,7 +69,7 @@ class ContextTypes(Generic[CCT, UD, CD, BD]):
             async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 ...
 
-    .. versionadded: 20.0
+    .. versionadded: 21.8
     """
 
     __slots__ = ("_bot_data", "_chat_data", "_context", "_user_data")

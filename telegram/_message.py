@@ -266,7 +266,7 @@ class Message(MaybeInaccessibleMessage):
         * The :paramref:`pinned_message` now can be either :class:`telegram.Message` or
           :class:`telegram.InaccessibleMessage`.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * The arguments and attributes ``voice_chat_scheduled``, ``voice_chat_started`` and
           ``voice_chat_ended``, ``voice_chat_participants_invited`` were renamed to
@@ -329,7 +329,7 @@ class Message(MaybeInaccessibleMessage):
             :attr:`parse_entity` and :attr:`parse_entities` methods for how to use properly.
             This list is empty if the message does not contain entities.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         link_preview_options (:class:`telegram.LinkPreviewOptions`, optional): Options used for
@@ -349,7 +349,7 @@ class Message(MaybeInaccessibleMessage):
             methods for how to use properly. This list is empty if the message does not contain
             caption entities.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         show_caption_above_media (:obj:`bool`, optional): |show_cap_above_med|
@@ -367,7 +367,7 @@ class Message(MaybeInaccessibleMessage):
         photo (Sequence[:class:`telegram.PhotoSize`], optional): Message is a photo, available
             sizes of the photo. This list is empty if the message does not contain a photo.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         sticker (:class:`telegram.Sticker`, optional): Message is a sticker, information
@@ -386,7 +386,7 @@ class Message(MaybeInaccessibleMessage):
             to the group or supergroup and information about them (the bot itself may be one of
             these members). This list is empty if the message does not contain new chat members.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         caption (:obj:`str`, optional): Caption for the animation, audio, document, paid media,
@@ -405,7 +405,7 @@ class Message(MaybeInaccessibleMessage):
         new_chat_photo (Sequence[:class:`telegram.PhotoSize`], optional): A chat photo was changed
             to this value. This list is empty if the message does not contain a new chat photo.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         delete_chat_photo (:obj:`bool`, optional): Service message: The chat photo was deleted.
@@ -456,69 +456,69 @@ class Message(MaybeInaccessibleMessage):
         video_chat_scheduled (:class:`telegram.VideoChatScheduled`, optional): Service message:
             video chat scheduled.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         video_chat_started (:class:`telegram.VideoChatStarted`, optional): Service message: video
             chat started.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         video_chat_ended (:class:`telegram.VideoChatEnded`, optional): Service message: video chat
             ended.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         video_chat_participants_invited (:class:`telegram.VideoChatParticipantsInvited` optional):
             Service message: new participants invited to a video chat.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         web_app_data (:class:`telegram.WebAppData`, optional): Service message: data sent by a Web
             App.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         reply_markup (:class:`telegram.InlineKeyboardMarkup`, optional): Inline keyboard attached
             to the message. :paramref:`~telegram.InlineKeyboardButton.login_url` buttons are
             represented as ordinary url buttons.
         is_topic_message (:obj:`bool`, optional): :obj:`True`, if the message is sent to a forum
             topic.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         message_thread_id (:obj:`int`, optional): Unique identifier of a message thread to which
             the message belongs; for supergroups only.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         forum_topic_created (:class:`telegram.ForumTopicCreated`, optional): Service message:
             forum topic created.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         forum_topic_closed (:class:`telegram.ForumTopicClosed`, optional): Service message:
             forum topic closed.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         forum_topic_reopened (:class:`telegram.ForumTopicReopened`, optional): Service message:
             forum topic reopened.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         forum_topic_edited (:class:`telegram.ForumTopicEdited`, optional): Service message:
             forum topic edited.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         general_forum_topic_hidden (:class:`telegram.GeneralForumTopicHidden`, optional):
             Service message: General forum topic hidden.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         general_forum_topic_unhidden (:class:`telegram.GeneralForumTopicUnhidden`, optional):
             Service message: General forum topic unhidden.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         write_access_allowed (:class:`telegram.WriteAccessAllowed`, optional): Service message:
             the user allowed the bot to write messages after adding it to the attachment or side
             menu, launching a Web App from a link, or accepting an explicit request from a Web App
             sent by the method
             `requestWriteAccess <https://core.telegram.org/bots/webapps#initializing-mini-apps>`_.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         has_media_spoiler (:obj:`bool`, optional): :obj:`True`, if the message media is covered
             by a spoiler animation.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         users_shared (:class:`telegram.UsersShared`, optional): Service message: users were shared
             with the bot
 
@@ -642,7 +642,7 @@ class Message(MaybeInaccessibleMessage):
             :attr:`parse_entity` and :attr:`parse_entities` methods for how to use properly.
             This list is empty if the message does not contain entities.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         link_preview_options (:class:`telegram.LinkPreviewOptions`): Optional. Options used for
@@ -662,7 +662,7 @@ class Message(MaybeInaccessibleMessage):
             methods for how to use properly. This list is empty if the message does not contain
             caption entities.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         show_caption_above_media (:obj:`bool`): Optional. |show_cap_above_med|
@@ -688,7 +688,7 @@ class Message(MaybeInaccessibleMessage):
 
             .. seealso:: :wiki:`Working with Files and Media <Working-with-Files-and-Media>`
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         sticker (:class:`telegram.Sticker`): Optional. Message is a sticker, information
@@ -715,7 +715,7 @@ class Message(MaybeInaccessibleMessage):
             to the group or supergroup and information about them (the bot itself may be one of
             these members). This list is empty if the message does not contain new chat members.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
         caption (:obj:`str`): Optional. Caption for the animation, audio, document, paid media,
             photo, video
@@ -733,7 +733,7 @@ class Message(MaybeInaccessibleMessage):
         new_chat_photo (tuple[:class:`telegram.PhotoSize`]): A chat photo was changed to
             this value. This list is empty if the message does not contain a new chat photo.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         delete_chat_photo (:obj:`bool`): Optional. Service message: The chat photo was deleted.
@@ -787,66 +787,66 @@ class Message(MaybeInaccessibleMessage):
         video_chat_scheduled (:class:`telegram.VideoChatScheduled`): Optional. Service message:
             video chat scheduled.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         video_chat_started (:class:`telegram.VideoChatStarted`): Optional. Service message: video
             chat started.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         video_chat_ended (:class:`telegram.VideoChatEnded`): Optional. Service message: video chat
             ended.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         video_chat_participants_invited (:class:`telegram.VideoChatParticipantsInvited`): Optional.
             Service message: new participants invited to a video chat.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         web_app_data (:class:`telegram.WebAppData`): Optional. Service message: data sent by a Web
             App.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         reply_markup (:class:`telegram.InlineKeyboardMarkup`): Optional. Inline keyboard attached
             to the message. :paramref:`~telegram.InlineKeyboardButton.login_url` buttons are
             represented as ordinary url buttons.
         is_topic_message (:obj:`bool`): Optional. :obj:`True`, if the message is sent to a forum
             topic.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         message_thread_id (:obj:`int`): Optional. Unique identifier of a message thread to which
             the message belongs; for supergroups only.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         forum_topic_created (:class:`telegram.ForumTopicCreated`): Optional. Service message:
             forum topic created.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         forum_topic_closed (:class:`telegram.ForumTopicClosed`): Optional. Service message:
             forum topic closed.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         forum_topic_reopened (:class:`telegram.ForumTopicReopened`): Optional. Service message:
             forum topic reopened.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         forum_topic_edited (:class:`telegram.ForumTopicEdited`): Optional. Service message:
             forum topic edited.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         general_forum_topic_hidden (:class:`telegram.GeneralForumTopicHidden`): Optional.
             Service message: General forum topic hidden.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         general_forum_topic_unhidden (:class:`telegram.GeneralForumTopicUnhidden`): Optional.
             Service message: General forum topic unhidden.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         write_access_allowed (:class:`telegram.WriteAccessAllowed`): Optional. Service message:
             the user allowed the bot added to the attachment menu to write messages.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         has_media_spoiler (:obj:`bool`): Optional. :obj:`True`, if the message media is covered
             by a spoiler animation.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         users_shared (:class:`telegram.UsersShared`): Optional. Service message: users were shared
             with the bot
 
@@ -1226,7 +1226,7 @@ class Message(MaybeInaccessibleMessage):
         """
         :obj:`int`: Shortcut for :attr:`message_id`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         """
         return self.message_id
 
@@ -1429,7 +1429,7 @@ class Message(MaybeInaccessibleMessage):
 
         .. seealso:: :wiki:`Working with Files and Media <Working-with-Files-and-Media>`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             :attr:`dice`, :attr:`passport_data` and :attr:`poll` are now also considered to be an
             attachment.
 
@@ -4315,7 +4315,7 @@ class Message(MaybeInaccessibleMessage):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.edit_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -4351,7 +4351,7 @@ class Message(MaybeInaccessibleMessage):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.close_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -4385,7 +4385,7 @@ class Message(MaybeInaccessibleMessage):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.reopen_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -4419,7 +4419,7 @@ class Message(MaybeInaccessibleMessage):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.delete_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -4453,7 +4453,7 @@ class Message(MaybeInaccessibleMessage):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.unpin_all_forum_topic_messages`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.

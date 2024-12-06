@@ -33,7 +33,7 @@ class WebAppData(TelegramObject):
     Examples:
         :any:`Webapp Bot <examples.webappbot>`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Args:
         data (:obj:`str`): The data. Be aware that a bad client can send arbitrary data in this

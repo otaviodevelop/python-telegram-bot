@@ -167,10 +167,10 @@ class ChatPhoto(TelegramObject):
     SIZE_SMALL: Final[int] = constants.ChatPhotoSize.SMALL
     """:const:`telegram.constants.ChatPhotoSize.SMALL`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     SIZE_BIG: Final[int] = constants.ChatPhotoSize.BIG
     """:const:`telegram.constants.ChatPhotoSize.BIG`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

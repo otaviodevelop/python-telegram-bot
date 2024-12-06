@@ -17,7 +17,7 @@
 # along with this program.  If not, see [http://www.gnu.org/licenses/].
 """This module contains classes used for warnings issued by this library.
 
-.. versionadded:: 20.0
+.. versionadded:: 21.8
 """
 
 __all__ = ["PTBDeprecationWarning", "PTBRuntimeWarning", "PTBUserWarning"]
@@ -29,7 +29,7 @@ class PTBUserWarning(UserWarning):
 
     .. seealso:: :wiki:`Exceptions, Warnings and Logging <Exceptions%2C-Warnings-and-Logging>`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     __slots__ = ()
@@ -39,7 +39,7 @@ class PTBRuntimeWarning(PTBUserWarning, RuntimeWarning):
     """
     Custom runtime warning class used for warnings in this library.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     __slots__ = ()
@@ -52,7 +52,7 @@ class PTBDeprecationWarning(PTBUserWarning, DeprecationWarning):
     """
     Custom warning class for deprecations in this library.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
        Renamed TelegramDeprecationWarning to PTBDeprecationWarning.
 
     Args:

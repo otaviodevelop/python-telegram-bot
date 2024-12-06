@@ -41,7 +41,7 @@ class BaseRateLimiter(ABC, Generic[RLARGS]):
     .. seealso:: :wiki:`Architecture Overview <Architecture>`,
         :wiki:`Avoiding Flood Limits <Avoiding-flood-limits>`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     __slots__ = ()

@@ -149,7 +149,7 @@ class ExtBot(Bot, Generic[RLARGS]):
 
     .. versionadded:: 13.6
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         Removed the attribute ``arbitrary_callback_data``. You can instead use
         :attr:`bot.callback_data_cache.maxsize <telegram.ext.CallbackDataCache.maxsize>` to
         access the size of the cache.
@@ -169,7 +169,7 @@ class ExtBot(Bot, Generic[RLARGS]):
         rate_limiter (:class:`telegram.ext.BaseRateLimiter`, optional): A rate limiter to use for
             limiting the number of requests made by the bot per time interval.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
     """
 
@@ -282,7 +282,7 @@ class ExtBot(Bot, Generic[RLARGS]):
         Examples:
             :any:`Arbitrary Callback Data Bot <examples.arbitrarycallbackdatabot>`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            * This property is now read-only.
            * This property is now optional and can be :obj:`None` if
              :paramref:`~telegram.ext.ExtBot.arbitrary_callback_data` is set to :obj:`False`.
@@ -390,7 +390,7 @@ class ExtBot(Bot, Generic[RLARGS]):
     def rate_limiter(self) -> Optional["BaseRateLimiter[RLARGS]"]:
         """The :class:`telegram.ext.BaseRateLimiter` used by this bot, if any.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         # This is a property because the rate limiter shouldn't be changed at runtime
         return self._rate_limiter

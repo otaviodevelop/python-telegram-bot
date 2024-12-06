@@ -85,11 +85,11 @@ class CallbackContext(Generic[BT, UD, CD, BD]):
         chat_id (:obj:`int`, optional): The ID of the chat associated with this object. Used
             to provide :attr:`chat_data`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         user_id (:obj:`int`, optional): The ID of the user associated with this object. Used
             to provide :attr:`user_data`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     Attributes:
         coroutine (:term:`awaitable`): Optional. Only present in error handlers if the
             error was caused by an awaitable run with :meth:`Application.create_task` or a handler
@@ -108,7 +108,7 @@ class CallbackContext(Generic[BT, UD, CD, BD]):
             Only present when passed to the callback of :class:`telegram.ext.Job` or in error
             handlers if the error is caused by a job.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 :attr:`job` is now also present in error handlers if the error is caused by a job.
 
     """
@@ -177,7 +177,7 @@ class CallbackContext(Generic[BT, UD, CD, BD]):
         .. seealso:: :wiki:`Storing Bot, User and Chat Related Data\
             <Storing-bot%2C-user-and-chat-related-data>`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             The chat data is now also present in error handlers if the error is caused by a job.
         """
         if self._chat_id is not None:
@@ -199,7 +199,7 @@ class CallbackContext(Generic[BT, UD, CD, BD]):
         .. seealso:: :wiki:`Storing Bot, User and Chat Related Data\
             <Storing-bot%2C-user-and-chat-related-data>`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             The user data is now also present in error handlers if the error is caused by a job.
         """
         if self._user_id is not None:
@@ -286,7 +286,7 @@ class CallbackContext(Generic[BT, UD, CD, BD]):
 
         .. seealso:: :meth:`telegram.ext.Application.add_error_handler`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Removed arguments ``async_args`` and ``async_kwargs``.
 
         Args:
@@ -297,13 +297,13 @@ class CallbackContext(Generic[BT, UD, CD, BD]):
                 context.
             job (:class:`telegram.ext.Job`, optional): The job associated with the error.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             coroutine (:term:`awaitable`, optional): The awaitable associated
                 with this error if the error was caused by a coroutine run with
                 :meth:`Application.create_task` or a handler callback with
                 :attr:`block=False <BaseHandler.block>`.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
                 .. versionchanged:: 20.2
                     Accepts :class:`asyncio.Future` and generator-based coroutine functions.

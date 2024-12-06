@@ -45,12 +45,12 @@ UT = TypeVar("UT")
 HandlerCallback = Callable[[UT, CCT], Coroutine[Any, Any, RT]]
 """Type of a handler callback
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 """
 JobCallback = Callable[[CCT], Coroutine[Any, Any, Any]]
 """Type of a job callback
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 """
 
 ConversationKey = tuple[Union[int, str], ...]
@@ -72,7 +72,7 @@ CDCData = tuple[list[tuple[str, float, dict[str, Any]]], dict[str, str]]
 BT = TypeVar("BT", bound="Bot")
 """Type of the bot.
 
-.. versionadded:: 20.0
+.. versionadded:: 21.8
 """
 UD = TypeVar("UD")
 """Type of the user data for a single user.
@@ -92,15 +92,15 @@ BD = TypeVar("BD")
 JQ = TypeVar("JQ", bound=Union[None, "JobQueue"])
 """Type of the job queue.
 
-.. versionadded:: 20.0"""
+.. versionadded:: 21.8"""
 
 RL = TypeVar("RL", bound="Optional[BaseRateLimiter]")
 """Type of the rate limiter.
 
-.. versionadded:: 20.0"""
+.. versionadded:: 21.8"""
 
 RLARGS = TypeVar("RLARGS")
 """Type of the rate limiter arguments.
 
-.. versionadded:: 20.0"""
+.. versionadded:: 21.8"""
 FilterDataDict = dict[str, list[Any]]

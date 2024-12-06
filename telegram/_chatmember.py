@@ -48,7 +48,7 @@ class ChatMember(TelegramObject):
     Examples:
         :any:`Chat Member Bot <examples.chatmemberbot>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * As of Bot API 5.3, :class:`ChatMember` is nothing but the base class for the subclasses
           listed above and is no longer returned directly by :meth:`~telegram.Bot.get_chat`.
@@ -186,7 +186,7 @@ class ChatMemberAdministrator(ChatMember):
     Represents a chat member that has some additional privileges.
 
     .. versionadded:: 13.7
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
        * Argument and attribute ``can_manage_voice_chats`` were renamed to
          :paramref:`can_manage_video_chats` and  :attr:`can_manage_video_chats` in accordance to
@@ -213,7 +213,7 @@ class ChatMemberAdministrator(ChatMember):
         can_manage_video_chats (:obj:`bool`): :obj:`True`, if the
             administrator can manage video chats.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         can_restrict_members (:obj:`bool`): :obj:`True`, if the
             administrator can restrict, ban or unban chat members.
         can_promote_members (:obj:`bool`): :obj:`True`, if the administrator
@@ -254,7 +254,7 @@ class ChatMemberAdministrator(ChatMember):
         can_manage_topics (:obj:`bool`, optional): :obj:`True`, if the user is allowed
             to create, rename, close, and reopen forum topics; for supergroups only.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         custom_title (:obj:`str`, optional): Custom title for this user.
 
     Attributes:
@@ -273,7 +273,7 @@ class ChatMemberAdministrator(ChatMember):
         can_manage_video_chats (:obj:`bool`): :obj:`True`, if the
             administrator can manage video chats.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         can_restrict_members (:obj:`bool`): :obj:`True`, if the
             administrator can restrict, ban or unban chat members, or access supergroup statistics.
         can_promote_members (:obj:`bool`): :obj:`True`, if the administrator can add new
@@ -314,7 +314,7 @@ class ChatMemberAdministrator(ChatMember):
         can_manage_topics (:obj:`bool`): Optional. :obj:`True`, if the user is allowed
             to create, rename, close, and reopen forum topics; for supergroups only
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         custom_title (:obj:`str`): Optional. Custom title for this user.
     """
 
@@ -428,7 +428,7 @@ class ChatMemberRestricted(ChatMember):
     in the chat. Supergroups only.
 
     .. versionadded:: 13.7
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
        All arguments were made positional and their order was changed.
        The argument can_manage_topics was added.
 
@@ -456,7 +456,7 @@ class ChatMemberRestricted(ChatMember):
         can_manage_topics (:obj:`bool`): :obj:`True`, if the user is allowed to create
             forum topics.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         until_date (:class:`datetime.datetime`): Date when restrictions
            will be lifted for this user.
 
@@ -506,7 +506,7 @@ class ChatMemberRestricted(ChatMember):
         can_manage_topics (:obj:`bool`): :obj:`True`, if the user is allowed to create
             forum topics.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         until_date (:class:`datetime.datetime`): Date when restrictions
            will be lifted for this user.
 

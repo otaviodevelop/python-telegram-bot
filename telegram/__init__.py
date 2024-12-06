@@ -525,14 +525,14 @@ __version__: str = _version.__version__
 #:  The components can also be accessed by name, so ``__version_info__[0]`` is equivalent to
 #:  ``__version_info__.major`` and so on.
 #:
-#:  .. versionadded:: 20.0
+#:  .. versionadded:: 21.8
 __version_info__: _version.Version = _version.__version_info__
 #: :obj:`str`: Shortcut for :const:`telegram.constants.BOT_API_VERSION`.
 #:
-#: .. versionchanged:: 20.0
+#: .. versionchanged:: 21.8
 #:    This constant was previously named ``bot_api_version``.
 __bot_api_version__: str = constants.BOT_API_VERSION
 #: :class:`typing.NamedTuple`: Shortcut for :const:`telegram.constants.BOT_API_VERSION_INFO`.
 #:
-#: .. versionadded:: 20.0
+#: .. versionadded:: 21.8
 __bot_api_version_info__: constants._BotAPIVersion = constants.BOT_API_VERSION_INFO

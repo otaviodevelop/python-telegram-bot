@@ -109,7 +109,7 @@ class AIORateLimiter(BaseRateLimiter[int]):
 
     .. seealso:: :wiki:`Avoiding Flood Limits <Avoiding-flood-limits>`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Args:
         overall_max_rate (:obj:`float`): The maximum number of requests allowed for the entire bot

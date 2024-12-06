@@ -100,35 +100,35 @@ class Invoice(TelegramObject):
     MIN_TITLE_LENGTH: Final[int] = constants.InvoiceLimit.MIN_TITLE_LENGTH
     """:const:`telegram.constants.InvoiceLimit.MIN_TITLE_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_TITLE_LENGTH: Final[int] = constants.InvoiceLimit.MAX_TITLE_LENGTH
     """:const:`telegram.constants.InvoiceLimit.MAX_TITLE_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_DESCRIPTION_LENGTH: Final[int] = constants.InvoiceLimit.MIN_DESCRIPTION_LENGTH
     """:const:`telegram.constants.InvoiceLimit.MIN_DESCRIPTION_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_DESCRIPTION_LENGTH: Final[int] = constants.InvoiceLimit.MAX_DESCRIPTION_LENGTH
     """:const:`telegram.constants.InvoiceLimit.MAX_DESCRIPTION_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_PAYLOAD_LENGTH: Final[int] = constants.InvoiceLimit.MIN_PAYLOAD_LENGTH
     """:const:`telegram.constants.InvoiceLimit.MIN_PAYLOAD_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_PAYLOAD_LENGTH: Final[int] = constants.InvoiceLimit.MAX_PAYLOAD_LENGTH
     """:const:`telegram.constants.InvoiceLimit.MAX_PAYLOAD_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_TIP_AMOUNTS: Final[int] = constants.InvoiceLimit.MAX_TIP_AMOUNTS
     """:const:`telegram.constants.InvoiceLimit.MAX_TIP_AMOUNTS`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

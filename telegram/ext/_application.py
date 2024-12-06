@@ -161,7 +161,7 @@ class Application(
     .. seealso:: :wiki:`Your First Bot <Extensions---Your-first-Bot>`,
         :wiki:`Architecture Overview <Architecture>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * Initialization is now done through the :class:`telegram.ext.ApplicationBuilder`.
         * Removed the attribute ``groups``.
@@ -176,7 +176,7 @@ class Application(
             available as :attr:`telegram.ext.CallbackContext.chat_data` in handler callbacks for
             updates from that chat.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 :attr:`chat_data` is now read-only. Note that the values of the mapping are still
                 mutable, i.e. editing ``context.chat_data`` within a handler callback is possible
                 (and encouraged), but editing the mapping ``application.chat_data`` itself is not.
@@ -193,7 +193,7 @@ class Application(
             available as :attr:`telegram.ext.CallbackContext.user_data` in handler callbacks for
             updates from that user.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 :attr:`user_data` is now read-only. Note that the values of the mapping are still
                 mutable, i.e. editing ``context.user_data`` within a handler callback is possible
                 (and encouraged), but editing the mapping ``application.user_data`` itself is not.
@@ -452,7 +452,7 @@ class Application(
     def builder() -> "InitApplicationBuilder":
         """Convenience method. Returns a new :class:`telegram.ext.ApplicationBuilder`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         # Unfortunately this needs to be here due to cyclical imports
         from telegram.ext import ApplicationBuilder  # pylint: disable=import-outside-toplevel
@@ -985,7 +985,7 @@ class Application(
                 raise a :class:`http.HTTPStatus.FORBIDDEN <http.HTTPStatus>` error if either the
                 header isn't set or it is set to a wrong token.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             unix (:class:`pathlib.Path` | :obj:`str` | :class:`socket.socket`, optional): Can be
                 either:
 
@@ -1260,7 +1260,7 @@ class Application(
 
         .. seealso:: :wiki:`Concurrency`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Persistence is now updated in an interval set by
             :attr:`telegram.ext.BasePersistence.update_interval`.
 
@@ -1412,7 +1412,7 @@ class Application(
         """Registers multiple handlers at once. The order of the handlers in the passed
         sequence(s) matters. See :meth:`add_handler` for details.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             handlers (Sequence[:class:`telegram.ext.BaseHandler`] | \
@@ -1486,7 +1486,7 @@ class Application(
             the asynchronous nature of these features. Please make sure that your program can
             avoid or handle such situations.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int`): The chat id to delete. The entry will be deleted even if it is
@@ -1505,7 +1505,7 @@ class Application(
             the asynchronous nature of these features. Please make sure that your program can
             avoid or handle such situations.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             user_id (:obj:`int`): The user id to delete. The entry will be deleted even if it is
@@ -1839,7 +1839,7 @@ class Application(
         (even in other groups) will handle the update. All other exceptions raised by an error
         handler will just be logged.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
 
             * ``dispatch_error`` was renamed to :meth:`process_error`.
             * Exceptions raised by error handlers are now properly logged.
@@ -1851,7 +1851,7 @@ class Application(
             error (:obj:`Exception`): The error that was raised.
             job (:class:`telegram.ext.Job`, optional): The job that caused the error.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             coroutine (:term:`coroutine function`, optional): The coroutine that caused the error.
 
         Returns:

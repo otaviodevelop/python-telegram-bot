@@ -114,7 +114,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
     .. seealso:: :wiki:`Architecture Overview <Architecture>`,
         :wiki:`Making Your Bot Persistent <Making-your-bot-persistent>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * The parameters and attributes ``store_*_data`` were replaced by :attr:`store_data`.
         * ``insert/replace_bot`` was dropped. Serialization of bot instances now needs to be
@@ -130,7 +130,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
             wait between two consecutive runs of updating the persistence. Defaults to ``60``
             seconds.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     Attributes:
         store_data (:class:`~telegram.ext.PersistenceInput`): Specifies which kinds of data will
             be saved by this persistence instance.
@@ -158,7 +158,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
         """:obj:`float`: Time (in seconds) that the :class:`~telegram.ext.Application`
         will wait between two consecutive runs of updating the persistence.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return self._update_interval
 
@@ -194,7 +194,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
         - The type from :attr:`telegram.ext.ContextTypes.user_data`
           if :class:`telegram.ext.ContextTypes` is used.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             This method may now return a :obj:`dict` instead of a :obj:`collections.defaultdict`
 
         Returns:
@@ -213,7 +213,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
         - The type from :attr:`telegram.ext.ContextTypes.chat_data`
           if :class:`telegram.ext.ContextTypes` is used.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             This method may now return a :obj:`dict` instead of a :obj:`collections.defaultdict`
 
         Returns:
@@ -244,7 +244,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
 
         .. versionadded:: 13.6
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            Changed this method into an :external:func:`~abc.abstractmethod`.
 
         Returns:
@@ -320,7 +320,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
 
         .. versionadded:: 13.6
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            Changed this method into an :external:func:`~abc.abstractmethod`.
 
         Args:
@@ -334,7 +334,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
         """Will be called by the :class:`telegram.ext.Application`, when using
         :meth:`~telegram.ext.Application.drop_chat_data`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int`): The chat id to delete from the persistence.
@@ -345,7 +345,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
         """Will be called by the :class:`telegram.ext.Application`, when using
         :meth:`~telegram.ext.Application.drop_user_data`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             user_id (:obj:`int`): The user id to delete from the persistence.
@@ -368,7 +368,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
 
         .. versionadded:: 13.6
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            Changed this method into an :external:func:`~abc.abstractmethod`.
 
         Args:
@@ -395,7 +395,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
 
         .. versionadded:: 13.6
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            Changed this method into an :external:func:`~abc.abstractmethod`.
 
         Args:
@@ -422,7 +422,7 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
 
         .. versionadded:: 13.6
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            Changed this method into an :external:func:`~abc.abstractmethod`.
 
         Args:
@@ -435,6 +435,6 @@ class BasePersistence(Generic[UD, CD, BD], ABC):
         """Will be called by :meth:`telegram.ext.Application.stop`. Gives the
         persistence a chance to finish up saving or close a database connection gracefully.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            Changed this method into an :external:func:`~abc.abstractmethod`.
         """

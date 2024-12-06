@@ -31,7 +31,7 @@ class RequestData:
     """Instances of this class collect the data needed for one request to the Bot API, including
     all parameters and files to be sent along with the request.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Warning:
         How exactly instances of this are created should be considered an implementation detail

@@ -41,7 +41,7 @@ class WebhookInfo(TelegramObject):
     :attr:`last_error_message`, :attr:`max_connections`, :attr:`allowed_updates` and
     :attr:`last_synchronization_error_date` are equal.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
        :attr:`last_synchronization_error_date` is considered as well when comparing objects of
        this type in terms of equality.
 
@@ -64,14 +64,14 @@ class WebhookInfo(TelegramObject):
             subscribed to. Defaults to all update types, except
             :attr:`telegram.Update.chat_member`.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         last_synchronization_error_date (:class:`datetime.datetime`, optional): Datetime of the
             most recent error that happened when trying to synchronize available updates with
             Telegram datacenters.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
             .. versionchanged:: 20.3
                 |datetime_localization|
@@ -94,7 +94,7 @@ class WebhookInfo(TelegramObject):
             subscribed to. Defaults to all update types, except
             :attr:`telegram.Update.chat_member`.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|
@@ -102,7 +102,7 @@ class WebhookInfo(TelegramObject):
             most recent error that happened when trying to synchronize available updates with
             Telegram datacenters.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
             .. versionchanged:: 20.3
                 |datetime_localization|

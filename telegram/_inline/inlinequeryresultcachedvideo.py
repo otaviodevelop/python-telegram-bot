@@ -75,7 +75,7 @@ class InlineQueryResultCachedVideo(InlineQueryResult):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|

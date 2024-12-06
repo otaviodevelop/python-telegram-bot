@@ -33,7 +33,7 @@ class WriteAccessAllowed(TelegramObject):
     Objects of this class are comparable in terms of equality. Two objects of this class are
     considered equal, if their :attr:`web_app_name` is equal.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     .. versionchanged:: 20.6
        Added custom equality comparison for objects of this class.
 

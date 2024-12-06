@@ -173,35 +173,35 @@ class InlineQueryResultLocation(InlineQueryResult):
     HORIZONTAL_ACCURACY: Final[int] = constants.LocationLimit.HORIZONTAL_ACCURACY
     """:const:`telegram.constants.LocationLimit.HORIZONTAL_ACCURACY`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_HEADING: Final[int] = constants.LocationLimit.MIN_HEADING
     """:const:`telegram.constants.LocationLimit.MIN_HEADING`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_HEADING: Final[int] = constants.LocationLimit.MAX_HEADING
     """:const:`telegram.constants.LocationLimit.MAX_HEADING`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_LIVE_PERIOD: Final[int] = constants.LocationLimit.MIN_LIVE_PERIOD
     """:const:`telegram.constants.LocationLimit.MIN_LIVE_PERIOD`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_LIVE_PERIOD: Final[int] = constants.LocationLimit.MAX_LIVE_PERIOD
     """:const:`telegram.constants.LocationLimit.MAX_LIVE_PERIOD`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_PROXIMITY_ALERT_RADIUS: Final[int] = constants.LocationLimit.MIN_PROXIMITY_ALERT_RADIUS
     """:const:`telegram.constants.LocationLimit.MIN_PROXIMITY_ALERT_RADIUS`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_PROXIMITY_ALERT_RADIUS: Final[int] = constants.LocationLimit.MAX_PROXIMITY_ALERT_RADIUS
     """:const:`telegram.constants.LocationLimit.MAX_PROXIMITY_ALERT_RADIUS`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

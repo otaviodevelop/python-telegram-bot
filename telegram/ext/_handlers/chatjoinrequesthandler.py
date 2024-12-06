@@ -38,7 +38,7 @@ class ChatJoinRequestHandler(BaseHandler[Update, CCT, RT]):
         for which the chat ID is listed in :paramref:`chat_id` or the username is listed in
         :paramref:`username`, or both.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
     Warning:
         When setting :paramref:`block` to :obj:`False`, you cannot rely on adding custom
@@ -58,11 +58,11 @@ class ChatJoinRequestHandler(BaseHandler[Update, CCT, RT]):
         chat_id (:obj:`int` | Collection[:obj:`int`], optional): Filters requests to allow only
             those which are asking to join the specified chat ID(s).
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         username (:obj:`str` | Collection[:obj:`str`], optional): Filters requests to allow only
             those which are asking to join the specified username(s).
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         block (:obj:`bool`, optional): Determines whether the return value of the callback should
             be awaited before processing the next handler in
             :meth:`telegram.ext.Application.process_update`. Defaults to :obj:`True`.

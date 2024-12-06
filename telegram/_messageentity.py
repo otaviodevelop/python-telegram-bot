@@ -56,7 +56,7 @@ class MessageEntity(TelegramObject):
             (monowidth block), :attr:`TEXT_LINK` (for clickable text URLs), :attr:`TEXT_MENTION`
             (for users without usernames), :attr:`CUSTOM_EMOJI` (for inline custom emoji stickers).
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
                 Added inline custom emoji
 
             .. versionadded:: 20.8
@@ -73,7 +73,7 @@ class MessageEntity(TelegramObject):
             of the custom emoji. Use :meth:`telegram.Bot.get_custom_emoji_stickers` to get full
             information about the sticker.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     Attributes:
         type (:obj:`str`): Type of the entity.  Can be :attr:`MENTION` (``@username``),
             :attr:`HASHTAG` (``#hashtag`` or ``#hashtag@chatusername``), :attr:`CASHTAG` (``$USD``
@@ -86,7 +86,7 @@ class MessageEntity(TelegramObject):
             (monowidth block), :attr:`TEXT_LINK` (for clickable text URLs), :attr:`TEXT_MENTION`
             (for users without usernames), :attr:`CUSTOM_EMOJI` (for inline custom emoji stickers).
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
                 Added inline custom emoji
 
             .. versionadded:: 20.8
@@ -103,7 +103,7 @@ class MessageEntity(TelegramObject):
             of the custom emoji. Use :meth:`telegram.Bot.get_custom_emoji_stickers` to get full
             information about the sticker.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
     """
 
@@ -378,7 +378,7 @@ class MessageEntity(TelegramObject):
     CUSTOM_EMOJI: Final[str] = constants.MessageEntityType.CUSTOM_EMOJI
     """:const:`telegram.constants.MessageEntityType.CUSTOM_EMOJI`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     EMAIL: Final[str] = constants.MessageEntityType.EMAIL
     """:const:`telegram.constants.MessageEntityType.EMAIL`"""

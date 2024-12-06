@@ -84,7 +84,7 @@ class BaseRequest(
     .. seealso:: :wiki:`Architecture Overview <Architecture>`,
         :wiki:`Builder Pattern <Builder-Pattern>`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     __slots__ = ()

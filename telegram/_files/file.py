@@ -42,7 +42,7 @@ class File(TelegramObject):
     Objects of this class are comparable in terms of equality. Two objects of this class are
     considered equal, if their :attr:`file_unique_id` is equal.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         ``download`` was split into :meth:`download_to_drive` and :meth:`download_to_memory`.
 
     Note:
@@ -143,7 +143,7 @@ class File(TelegramObject):
 
         .. seealso:: :wiki:`Working with Files and Media <Working-with-Files-and-Media>`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
 
             * :paramref:`custom_path` parameter now also accepts :class:`pathlib.Path` as argument.
             * Returns :class:`pathlib.Path` object in cases where previously a :obj:`str` was
@@ -243,7 +243,7 @@ class File(TelegramObject):
             If you want to immediately read the data from ``out`` after calling this method, you
             should call ``out.seek(0)`` first. See also :meth:`io.IOBase.seek`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         .. versionchanged:: 21.7
             Raises :exc:`RuntimeError` if :attr:`file_path` is not set. Note that files without
@@ -315,22 +315,22 @@ class File(TelegramObject):
                 :paramref:`telegram.request.BaseRequest.post.read_timeout`. Defaults to
                 :attr:`~telegram.request.BaseRequest.DEFAULT_NONE`.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             write_timeout (:obj:`float` | :obj:`None`, optional): Value to pass to
                 :paramref:`telegram.request.BaseRequest.post.write_timeout`. Defaults to
                 :attr:`~telegram.request.BaseRequest.DEFAULT_NONE`.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             connect_timeout (:obj:`float` | :obj:`None`, optional): Value to pass to
                 :paramref:`telegram.request.BaseRequest.post.connect_timeout`. Defaults to
                 :attr:`~telegram.request.BaseRequest.DEFAULT_NONE`.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             pool_timeout (:obj:`float` | :obj:`None`, optional): Value to pass to
                 :paramref:`telegram.request.BaseRequest.post.pool_timeout`. Defaults to
                 :attr:`~telegram.request.BaseRequest.DEFAULT_NONE`.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
         Returns:
             :obj:`bytearray`: The same object as :paramref:`buf` if it was specified. Otherwise a

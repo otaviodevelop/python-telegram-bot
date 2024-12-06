@@ -55,7 +55,7 @@ class KeyboardButton(TelegramObject):
 
     .. versionchanged:: 21.0
        Removed deprecated argument and attribute ``request_user``.
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
        :attr:`web_app` is considered as well when comparing objects of this type in terms of
        equality.
     .. versionchanged:: 20.5
@@ -77,7 +77,7 @@ class KeyboardButton(TelegramObject):
             The Web App will be able to send a :attr:`Message.web_app_data` service message.
             Available in private chats only.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
         request_users (:class:`KeyboardButtonRequestUsers`, optional): If specified, pressing the
             button will open a list of suitable users. Tapping on any user will send its
@@ -106,7 +106,7 @@ class KeyboardButton(TelegramObject):
             The Web App will be able to send a :attr:`Message.web_app_data` service message.
             Available in private chats only.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         request_users (:class:`KeyboardButtonRequestUsers`): Optional. If specified, pressing the
             button will open a list of suitable users. Tapping on any user will send its
             identifier to the bot in a :attr:`telegram.Message.users_shared` service message.

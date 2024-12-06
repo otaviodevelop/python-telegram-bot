@@ -84,10 +84,10 @@ class ChatLocation(TelegramObject):
     MIN_ADDRESS: Final[int] = constants.LocationLimit.MIN_CHAT_LOCATION_ADDRESS
     """:const:`telegram.constants.LocationLimit.MIN_CHAT_LOCATION_ADDRESS`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_ADDRESS: Final[int] = constants.LocationLimit.MAX_CHAT_LOCATION_ADDRESS
     """:const:`telegram.constants.LocationLimit.MAX_CHAT_LOCATION_ADDRESS`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

@@ -54,7 +54,7 @@ class InlineQueryResultCachedPhoto(InlineQueryResult):
         parse_mode (:obj:`str`, optional): |parse_mode|
         caption_entities (Sequence[:class:`telegram.MessageEntity`], optional): |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         reply_markup (:class:`telegram.InlineKeyboardMarkup`, optional): Inline keyboard attached
@@ -79,7 +79,7 @@ class InlineQueryResultCachedPhoto(InlineQueryResult):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|

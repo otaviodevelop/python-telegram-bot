@@ -217,12 +217,12 @@ class PollOption(TelegramObject):
     MIN_LENGTH: Final[int] = constants.PollLimit.MIN_OPTION_LENGTH
     """:const:`telegram.constants.PollLimit.MIN_OPTION_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_LENGTH: Final[int] = constants.PollLimit.MAX_OPTION_LENGTH
     """:const:`telegram.constants.PollLimit.MAX_OPTION_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
 
@@ -246,7 +246,7 @@ class PollAnswer(TelegramObject):
         option_ids (Sequence[:obj:`int`]): Identifiers of answer options, chosen by the user. May
             be empty if the user retracted their vote.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
         user (:class:`telegram.User`, optional): The user that changed the answer to the poll,
             if the voter isn't anonymous. If the voter is anonymous, this field will contain the
@@ -264,7 +264,7 @@ class PollAnswer(TelegramObject):
         option_ids (tuple[:obj:`int`]): Identifiers of answer options, chosen by the user. May
             be empty if the user retracted their vote.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
         user (:class:`telegram.User`): Optional. The user, who changed the answer to the
             poll, if the voter isn't anonymous. If the voter is anonymous, this field will contain
@@ -337,7 +337,7 @@ class Poll(TelegramObject):
             :tg-const:`telegram.Poll.MAX_QUESTION_LENGTH` characters.
         options (Sequence[:class:`~telegram.PollOption`]): List of poll options.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
         is_closed (:obj:`bool`): :obj:`True`, if the poll is closed.
         is_anonymous (:obj:`bool`): :obj:`True`, if the poll is anonymous.
@@ -354,7 +354,7 @@ class Poll(TelegramObject):
             :attr:`explanation`. This list is empty if the message does not contain explanation
             entities.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                * This attribute is now always a (possibly empty) list and never :obj:`None`.
                * |sequenceclassargs|
@@ -377,7 +377,7 @@ class Poll(TelegramObject):
             :tg-const:`telegram.Poll.MAX_QUESTION_LENGTH` characters.
         options (tuple[:class:`~telegram.PollOption`]): List of poll options.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
         total_voter_count (:obj:`int`): Total number of users that voted in the poll.
         is_closed (:obj:`bool`): :obj:`True`, if the poll is closed.
@@ -394,10 +394,10 @@ class Poll(TelegramObject):
             like usernames, URLs, bot commands, etc. that appear in the :attr:`explanation`.
             This list is empty if the message does not contain explanation entities.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                This attribute is now always a (possibly empty) list and never :obj:`None`.
         open_period (:obj:`int`): Optional. Amount of time in seconds the poll will be active
             after creation.
@@ -601,50 +601,50 @@ class Poll(TelegramObject):
     MAX_EXPLANATION_LENGTH: Final[int] = constants.PollLimit.MAX_EXPLANATION_LENGTH
     """:const:`telegram.constants.PollLimit.MAX_EXPLANATION_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_EXPLANATION_LINE_FEEDS: Final[int] = constants.PollLimit.MAX_EXPLANATION_LINE_FEEDS
     """:const:`telegram.constants.PollLimit.MAX_EXPLANATION_LINE_FEEDS`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_OPEN_PERIOD: Final[int] = constants.PollLimit.MIN_OPEN_PERIOD
     """:const:`telegram.constants.PollLimit.MIN_OPEN_PERIOD`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_OPEN_PERIOD: Final[int] = constants.PollLimit.MAX_OPEN_PERIOD
     """:const:`telegram.constants.PollLimit.MAX_OPEN_PERIOD`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_QUESTION_LENGTH: Final[int] = constants.PollLimit.MIN_QUESTION_LENGTH
     """:const:`telegram.constants.PollLimit.MIN_QUESTION_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_QUESTION_LENGTH: Final[int] = constants.PollLimit.MAX_QUESTION_LENGTH
     """:const:`telegram.constants.PollLimit.MAX_QUESTION_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_OPTION_LENGTH: Final[int] = constants.PollLimit.MIN_OPTION_LENGTH
     """:const:`telegram.constants.PollLimit.MIN_OPTION_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_OPTION_LENGTH: Final[int] = constants.PollLimit.MAX_OPTION_LENGTH
     """:const:`telegram.constants.PollLimit.MAX_OPTION_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_OPTION_NUMBER: Final[int] = constants.PollLimit.MIN_OPTION_NUMBER
     """:const:`telegram.constants.PollLimit.MIN_OPTION_NUMBER`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_OPTION_NUMBER: Final[int] = constants.PollLimit.MAX_OPTION_NUMBER
     """:const:`telegram.constants.PollLimit.MAX_OPTION_NUMBER`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

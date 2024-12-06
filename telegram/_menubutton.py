@@ -44,7 +44,7 @@ class MenuButton(TelegramObject):
     considered equal, if their :attr:`type` is equal. For subclasses with additional attributes,
     the notion of equality is overridden.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Args:
         type (:obj:`str`): Type of menu button that the instance represents.
@@ -118,7 +118,7 @@ class MenuButtonCommands(MenuButton):
 
     .. include:: inclusions/menu_button_command_video.rst
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     Attributes:
         type (:obj:`str`): :tg-const:`telegram.constants.MenuButtonType.COMMANDS`.
     """
@@ -138,7 +138,7 @@ class MenuButtonWebApp(MenuButton):
     considered equal, if their :attr:`type`, :attr:`text` and :attr:`web_app`
     are equal.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Args:
         text (:obj:`str`): Text of the button.
@@ -189,7 +189,7 @@ class MenuButtonWebApp(MenuButton):
 class MenuButtonDefault(MenuButton):
     """Describes that no specific value for the menu button was set.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     Attributes:
         type (:obj:`str`): :tg-const:`telegram.constants.MenuButtonType.DEFAULT`.
     """

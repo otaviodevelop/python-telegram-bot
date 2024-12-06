@@ -166,7 +166,7 @@ class _ChatBase(TelegramObject):
             Telegram for backward compatibility. You should use :meth:`mention_markdown_v2`
             instead.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             name (:obj:`str`): The name used as a link for the chat. Defaults to
@@ -199,7 +199,7 @@ class _ChatBase(TelegramObject):
 
     def mention_markdown_v2(self, name: Optional[str] = None) -> str:
         """
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             name (:obj:`str`): The name used as a link for the chat. Defaults to
@@ -232,7 +232,7 @@ class _ChatBase(TelegramObject):
 
     def mention_html(self, name: Optional[str] = None) -> str:
         """
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             name (:obj:`str`): The name used as a link for the chat. Defaults to :attr:`full_name`.
@@ -615,7 +615,7 @@ class _ChatBase(TelegramObject):
         :meth:`telegram.Bot.promote_chat_member`.
 
         .. versionadded:: 13.2
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            The argument ``can_manage_voice_chats`` was renamed to
            :paramref:`~telegram.Bot.promote_chat_member.can_manage_video_chats` in accordance to
            Bot API 6.0.
@@ -784,7 +784,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.set_chat_photo`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -818,7 +818,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.delete_chat_photo`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -852,7 +852,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.set_chat_title`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -887,7 +887,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.set_chat_description`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -2406,7 +2406,7 @@ class _ChatBase(TelegramObject):
 
         .. seealso:: :meth:`forward_to`, :meth:`forward_messages_from`, :meth:`forward_messages_to`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :class:`telegram.Message`: On success, instance representing the message posted.
@@ -2449,7 +2449,7 @@ class _ChatBase(TelegramObject):
         .. seealso:: :meth:`forward_from`, :meth:`forward_messages_from`,
             :meth:`forward_messages_to`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :class:`telegram.Message`: On success, instance representing the message posted.
@@ -2869,7 +2869,7 @@ class _ChatBase(TelegramObject):
 
         .. seealso:: :meth:`get_menu_button`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -2903,7 +2903,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.create_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :class:`telegram.ForumTopic`
@@ -2939,7 +2939,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.edit_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -2973,7 +2973,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.close_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -3005,7 +3005,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.reopen_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -3037,7 +3037,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.delete_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -3070,7 +3070,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.unpin_all_forum_topic_messages`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -3135,7 +3135,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.edit_general_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -3166,7 +3166,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.close_general_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -3198,7 +3198,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.reopen_general_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -3228,7 +3228,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.hide_general_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -3260,7 +3260,7 @@ class _ChatBase(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.unhide_general_forum_topic`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -3295,7 +3295,7 @@ class _ChatBase(TelegramObject):
 
         .. seealso:: :meth:`set_menu_button`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :class:`telegram.MenuButton`: On success, the current menu button is returned.
@@ -3484,7 +3484,7 @@ class Chat(_ChatBase):
     Objects of this class are comparable in terms of equality. Two objects of this class are
     considered equal, if their :attr:`id` is equal.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * Removed the deprecated methods ``kick_member`` and ``get_members_count``.
         * The following are now keyword-only arguments in Bot methods:
@@ -3492,7 +3492,7 @@ class Chat(_ChatBase):
           ``api_kwargs``. Use a named argument for those,
           and notice that some positional arguments changed position as a result.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         Removed the attribute ``all_members_are_administrators``. As long as Telegram provides
         this field for backwards compatibility, it is available through
         :attr:`~telegram.TelegramObject.api_kwargs`.
@@ -3513,7 +3513,7 @@ class Chat(_ChatBase):
         is_forum (:obj:`bool`, optional): :obj:`True`, if the supergroup chat is a forum
             (has topics_ enabled).
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
     Attributes:
         id (:obj:`int`): Unique identifier for this chat.
@@ -3527,7 +3527,7 @@ class Chat(_ChatBase):
         is_forum (:obj:`bool`): Optional. :obj:`True`, if the supergroup chat is a forum
             (has topics_ enabled).
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
     .. _topics: https://telegram.org/blog/topics-in-groups-collectible-usernames#topics-in-groups
     """

@@ -136,7 +136,7 @@ class PicklePersistence(BasePersistence[UD, CD, BD]):
 
     .. seealso:: :wiki:`Making Your Bot Persistent <Making-your-bot-persistent>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * The parameters and attributes ``store_*_data`` were replaced by :attr:`store_data`.
         * The parameter and attribute ``filename`` were replaced by :attr:`filepath`.
@@ -166,7 +166,7 @@ class PicklePersistence(BasePersistence[UD, CD, BD]):
             the persistence in regular intervals. This parameter specifies the time (in seconds) to
             wait between two consecutive runs of updating the persistence. Defaults to 60 seconds.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     Attributes:
         filepath (:obj:`str` | :obj:`pathlib.Path`): The filepath for storing the pickle files.
             When :attr:`single_file` is :obj:`False` this will be used as a prefix.
@@ -483,7 +483,7 @@ class PicklePersistence(BasePersistence[UD, CD, BD]):
         """Will delete the specified key from the ``chat_data`` and depending on
         :attr:`on_flush` save the pickle file.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int`): The chat id to delete from the persistence.
@@ -502,7 +502,7 @@ class PicklePersistence(BasePersistence[UD, CD, BD]):
         """Will delete the specified key from the ``user_data`` and depending on
         :attr:`on_flush` save the pickle file.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             user_id (:obj:`int`): The user id to delete from the persistence.

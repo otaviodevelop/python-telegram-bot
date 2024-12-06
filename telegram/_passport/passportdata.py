@@ -44,7 +44,7 @@ class PassportData(TelegramObject):
             information about documents and other Telegram Passport elements that was shared with
             the bot.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         credentials (:class:`telegram.EncryptedCredentials`)): Encrypted credentials.
@@ -54,7 +54,7 @@ class PassportData(TelegramObject):
             information about documents and other Telegram Passport elements that was shared with
             the bot.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         credentials (:class:`telegram.EncryptedCredentials`): Encrypted credentials.
@@ -102,7 +102,7 @@ class PassportData(TelegramObject):
         tuple[:class:`telegram.EncryptedPassportElement`]: Lazily decrypt and return information
             about documents and other Telegram Passport elements which were shared with the bot.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Returns a tuple instead of a list.
 
         Raises:

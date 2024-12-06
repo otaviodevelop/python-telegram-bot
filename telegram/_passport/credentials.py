@@ -416,14 +416,14 @@ class SecureValue(TelegramObject):
             "identity_card", "internal_passport", "utility_bill", "bank_statement",
             "rental_agreement", "passport_registration" and "temporary_registration".
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         files (tuple[:class:`telegram.FileCredentials`]): Optional. Credentials for encrypted
             files. Available for "utility_bill", "bank_statement", "rental_agreement",
             "passport_registration" and "temporary_registration" types.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|

@@ -52,7 +52,7 @@ class TelegramObject:
         not guarantee that this compatibility will always be provided. At least a manual one-time
         conversion of the data may be needed on major updates of the library.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * Removed argument and attribute ``bot`` for several subclasses. Use
           :meth:`set_bot` and :meth:`get_bot` instead.
@@ -67,12 +67,12 @@ class TelegramObject:
     Arguments:
         api_kwargs (dict[:obj:`str`, any], optional): |toapikwargsarg|
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
     Attributes:
         api_kwargs (:obj:`types.MappingProxyType` [:obj:`str`, any]): |toapikwargsattr|
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
     """
 
@@ -224,7 +224,7 @@ class TelegramObject:
             In all other cases, it's recommended to use the dot notation instead, i.e.
             ``telegram_object.attribute_name``.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
 
             ``telegram_object['from']`` will look up the key ``from_user``. This is to account for
             special cases like :attr:`Message.from_user` that deviate from the official Bot API.
@@ -442,7 +442,7 @@ class TelegramObject:
     ) -> tuple[Tele_co, ...]:
         """Converts a list of JSON objects to a tuple of Telegram objects.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
 
            * Returns a tuple instead of a list.
            * Filters out any :obj:`None` values.
@@ -579,7 +579,7 @@ class TelegramObject:
     def to_json(self) -> str:
         """Gives a JSON representation of object.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Now includes all entries of :attr:`api_kwargs`.
 
         Returns:
@@ -590,7 +590,7 @@ class TelegramObject:
     def to_dict(self, recursive: bool = True) -> JSONDict:
         """Gives representation of object as :obj:`dict`.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
 
             * Now includes all entries of :attr:`api_kwargs`.
             * Attributes whose values are empty sequences are no longer included.
@@ -600,7 +600,7 @@ class TelegramObject:
                 (if found) in the attributes to a dictionary. Else, preserves it as an object
                 itself. Defaults to :obj:`True`.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
         Returns:
             :obj:`dict`
@@ -651,7 +651,7 @@ class TelegramObject:
 
         .. seealso:: :meth:`set_bot`
 
-        .. versionadded: 20.0
+        .. versionadded: 21.8
 
         Raises:
             RuntimeError: If no :class:`telegram.Bot` instance was set for this object.
@@ -667,7 +667,7 @@ class TelegramObject:
 
         .. seealso:: :meth:`get_bot`
 
-        .. versionadded: 20.0
+        .. versionadded: 21.8
 
         Arguments:
             bot (:class:`telegram.Bot` | :obj:`None`): The bot instance.

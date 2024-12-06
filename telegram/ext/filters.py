@@ -20,7 +20,7 @@
 This module contains filters for use with :class:`telegram.ext.MessageHandler`,
 :class:`telegram.ext.CommandHandler`, or :class:`telegram.ext.PrefixHandler`.
 
-.. versionchanged:: 20.0
+.. versionchanged:: 21.8
 
     #. Filters are no longer callable, if you're using a custom filter and are calling an existing
        filter, then switch to the new syntax: ``filters.{filter}.check_update(update)``.
@@ -170,7 +170,7 @@ class BaseFilter:
     will be the class name. If you want to overwrite this assign a better name to the :attr:`name`
     class variable.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
         Added the arguments :attr:`name` and :attr:`data_filter`.
 
     Args:
@@ -1508,7 +1508,7 @@ class _HasMediaSpoiler(MessageFilter):
 HAS_MEDIA_SPOILER = _HasMediaSpoiler(name="filters.HAS_MEDIA_SPOILER")
 """Messages that contain :attr:`telegram.Message.has_media_spoiler`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 """
 
 
@@ -1561,7 +1561,7 @@ class _IsTopicMessage(MessageFilter):
 IS_TOPIC_MESSAGE = _IsTopicMessage(name="filters.IS_TOPIC_MESSAGE")
 """Messages that contain :attr:`telegram.Message.is_topic_message`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 """
 
 
@@ -2023,7 +2023,7 @@ class StatusUpdate:
     FORUM_TOPIC_CLOSED = _ForumTopicClosed(name="filters.StatusUpdate.FORUM_TOPIC_CLOSED")
     """Messages that contain :attr:`telegram.Message.forum_topic_closed`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _ForumTopicCreated(MessageFilter):
@@ -2035,7 +2035,7 @@ class StatusUpdate:
     FORUM_TOPIC_CREATED = _ForumTopicCreated(name="filters.StatusUpdate.FORUM_TOPIC_CREATED")
     """Messages that contain :attr:`telegram.Message.forum_topic_created`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _ForumTopicEdited(MessageFilter):
@@ -2047,7 +2047,7 @@ class StatusUpdate:
     FORUM_TOPIC_EDITED = _ForumTopicEdited(name="filters.StatusUpdate.FORUM_TOPIC_EDITED")
     """Messages that contain :attr:`telegram.Message.forum_topic_edited`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _ForumTopicReopened(MessageFilter):
@@ -2059,7 +2059,7 @@ class StatusUpdate:
     FORUM_TOPIC_REOPENED = _ForumTopicReopened(name="filters.StatusUpdate.FORUM_TOPIC_REOPENED")
     """Messages that contain :attr:`telegram.Message.forum_topic_reopened`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _GeneralForumTopicHidden(MessageFilter):
@@ -2073,7 +2073,7 @@ class StatusUpdate:
     )
     """Messages that contain :attr:`telegram.Message.general_forum_topic_hidden`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _GeneralForumTopicUnhidden(MessageFilter):
@@ -2087,7 +2087,7 @@ class StatusUpdate:
     )
     """Messages that contain :attr:`telegram.Message.general_forum_topic_unhidden`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _GiveawayCreated(MessageFilter):
@@ -2248,7 +2248,7 @@ class StatusUpdate:
     """Messages that contain :attr:`telegram.Message.video_chat_ended`.
 
     .. versionadded:: 13.4
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This filter was formerly named ``VOICE_CHAT_ENDED``
     """
 
@@ -2262,7 +2262,7 @@ class StatusUpdate:
     """Messages that contain :attr:`telegram.Message.video_chat_scheduled`.
 
     .. versionadded:: 13.5
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This filter was formerly named ``VOICE_CHAT_SCHEDULED``
     """
 
@@ -2276,7 +2276,7 @@ class StatusUpdate:
     """Messages that contain :attr:`telegram.Message.video_chat_started`.
 
     .. versionadded:: 13.4
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This filter was formerly named ``VOICE_CHAT_STARTED``
     """
 
@@ -2292,7 +2292,7 @@ class StatusUpdate:
     """Messages that contain :attr:`telegram.Message.video_chat_participants_invited`.
 
     .. versionadded:: 13.4
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This filter was formerly named ``VOICE_CHAT_PARTICIPANTS_INVITED``
     """
 
@@ -2305,7 +2305,7 @@ class StatusUpdate:
     WEB_APP_DATA = _WebAppData(name="filters.StatusUpdate.WEB_APP_DATA")
     """Messages that contain :attr:`telegram.Message.web_app_data`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _WriteAccessAllowed(MessageFilter):
@@ -2317,7 +2317,7 @@ class StatusUpdate:
     WRITE_ACCESS_ALLOWED = _WriteAccessAllowed(name="filters.StatusUpdate.WRITE_ACCESS_ALLOWED")
     """Messages that contain :attr:`telegram.Message.write_access_allowed`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
 
@@ -2353,7 +2353,7 @@ class Sticker:
     """Messages that contain :attr:`telegram.Message.sticker` and
     :attr:`is animated <telegram.Sticker.is_animated>`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _Static(MessageFilter):
@@ -2369,7 +2369,7 @@ class Sticker:
     """Messages that contain :attr:`telegram.Message.sticker` and is a static sticker, i.e. does
     not contain :attr:`telegram.Sticker.is_animated` or :attr:`telegram.Sticker.is_video`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _Video(MessageFilter):
@@ -2382,7 +2382,7 @@ class Sticker:
     """Messages that contain :attr:`telegram.Message.sticker` and is a
     :attr:`video sticker <telegram.Sticker.is_video>`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     class _Premium(MessageFilter):
@@ -2397,7 +2397,7 @@ class Sticker:
     """Messages that contain :attr:`telegram.Message.sticker` and have a
     :attr:`premium animation <telegram.Sticker.premium_animation>`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     # neither mask nor emoji can be a message.sticker, so no filters for them
 
@@ -2558,7 +2558,7 @@ class UpdateType:
     :attr:`telegram.Update.edited_channel_post`, or
     :attr:`telegram.Update.edited_business_message`.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     .. versionchanged:: 21.1
         Added :attr:`telegram.Update.edited_business_message` to the filter.
@@ -2747,7 +2747,7 @@ USER_ATTACHMENT = _UserAttachment(name="filters.USER_ATTACHMENT")
 :attr:`attachment menu <telegram.User.added_to_attachment_menu>` as
 :attr:`telegram.Update.effective_user`.
 
-.. versionadded:: 20.0
+.. versionadded:: 21.8
 """
 
 
@@ -2764,7 +2764,7 @@ PREMIUM_USER = _UserPremium(name="filters.PREMIUM_USER")
 """This filter filters *any* message from a
 :attr:`Telegram Premium user <telegram.User.is_premium>` as :attr:`telegram.Update.effective_user`.
 
-.. versionadded:: 20.0
+.. versionadded:: 21.8
 """
 
 

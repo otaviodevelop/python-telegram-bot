@@ -83,7 +83,7 @@ class ReplyKeyboardMarkup(TelegramObject):
             the regular keyboard is hidden. Defaults to :obj:`False`, in which case the custom
             keyboard can be hidden and opened with a keyboard icon.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
     Attributes:
         keyboard (tuple[tuple[:class:`telegram.KeyboardButton`]]): Array of button rows,
@@ -117,7 +117,7 @@ class ReplyKeyboardMarkup(TelegramObject):
             the regular keyboard is hidden. If :obj:`False`, the custom keyboard can be hidden and
             opened with a keyboard icon.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
     """
 
@@ -211,7 +211,7 @@ class ReplyKeyboardMarkup(TelegramObject):
                 when the regular keyboard is hidden. Defaults to :obj:`False`, in which case the
                 custom keyboard can be hidden and opened with a keyboard icon.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
         """
         return cls(
             [[button]],
@@ -244,7 +244,7 @@ class ReplyKeyboardMarkup(TelegramObject):
             button_row (Sequence[:class:`telegram.KeyboardButton` | :obj:`str`]): The button to
                 use in the markup.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             resize_keyboard (:obj:`bool`, optional): Requests clients to resize the keyboard
                 vertically for optimal fit (e.g., make the keyboard smaller if there are just two
@@ -272,7 +272,7 @@ class ReplyKeyboardMarkup(TelegramObject):
                 when the regular keyboard is hidden. Defaults to :obj:`False`, in which case the
                 custom keyboard can be hidden and opened with a keyboard icon.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
         """
         return cls(
@@ -306,7 +306,7 @@ class ReplyKeyboardMarkup(TelegramObject):
             button_column (Sequence[:class:`telegram.KeyboardButton` | :obj:`str`]): The button
                 to use in the markup.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             resize_keyboard (:obj:`bool`, optional): Requests clients to resize the keyboard
                 vertically for optimal fit (e.g., make the keyboard smaller if there are just two
@@ -334,7 +334,7 @@ class ReplyKeyboardMarkup(TelegramObject):
                 when the regular keyboard is hidden. Defaults to :obj:`False`, in which case the
                 custom keyboard can be hidden and opened with a keyboard icon.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
         """
         button_grid = [[button] for button in button_column]
@@ -351,10 +351,10 @@ class ReplyKeyboardMarkup(TelegramObject):
     MIN_INPUT_FIELD_PLACEHOLDER: Final[int] = constants.ReplyLimit.MIN_INPUT_FIELD_PLACEHOLDER
     """:const:`telegram.constants.ReplyLimit.MIN_INPUT_FIELD_PLACEHOLDER`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_INPUT_FIELD_PLACEHOLDER: Final[int] = constants.ReplyLimit.MAX_INPUT_FIELD_PLACEHOLDER
     """:const:`telegram.constants.ReplyLimit.MAX_INPUT_FIELD_PLACEHOLDER`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

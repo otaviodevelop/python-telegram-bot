@@ -335,7 +335,7 @@ class TestTelegramObject:
         """Test when newer versions of the library remove or add attributes from classes (which
         the old pickled versions still/don't have).
         """
-        # We use a modified version of the 20.0a5 Chat class, which
+        # We use a modified version of the 21.8a5 Chat class, which
         # * has an `all_members_are_admins` attribute,
         # * a non-empty `api_kwargs` dict
         # * does not have the `is_forum` attribute

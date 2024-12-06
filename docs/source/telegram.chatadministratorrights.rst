@@ -1,7 +1,7 @@
 ChatAdministratorRights
 =======================
 
-.. versionadded:: 20.0
+.. versionadded:: 21.8
 
 .. autoclass:: telegram.ChatAdministratorRights
     :members:

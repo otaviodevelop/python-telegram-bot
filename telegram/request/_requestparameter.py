@@ -38,7 +38,7 @@ class RequestParameter:
     """Instances of this class represent a single parameter to be sent along with a request to
     the Bot API.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Warning:
         This class intended is to be used internally by the library and *not* by the user. Changes

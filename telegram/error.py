@@ -18,7 +18,7 @@
 # along with this program.  If not, see [http://www.gnu.org/licenses/].
 """This module contains classes that represent Telegram errors.
 
-.. versionchanged:: 20.0
+.. versionchanged:: 21.8
     Replaced ``Unauthorized`` by :class:`Forbidden`.
 """
 
@@ -99,7 +99,7 @@ class Forbidden(TelegramError):
     Examples:
         :any:`Raw API Bot <examples.rawapibot>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This class was previously named ``Unauthorized``.
     """
 
@@ -112,7 +112,7 @@ class InvalidToken(TelegramError):
     Args:
         message (:obj:`str`, optional): Any additional information about the exception.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     """
 
     __slots__ = ()
@@ -166,7 +166,7 @@ class TimedOut(NetworkError):
     Args:
         message (:obj:`str`, optional): Any additional information about the exception.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     """
 
     __slots__ = ()
@@ -204,7 +204,7 @@ class RetryAfter(TelegramError):
     """
     Raised when flood limits where exceeded.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
        :attr:`retry_after` is now an integer to comply with the Bot API.
 
     Args:
@@ -237,7 +237,7 @@ class Conflict(TelegramError):
 class PassportDecryptionError(TelegramError):
     """Something went wrong with decryption.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This class was previously named ``TelegramDecryptionError`` and was available via
         ``telegram.TelegramDecryptionError``.
     """

@@ -46,7 +46,7 @@ class Game(TelegramObject):
         photo (Sequence[:class:`telegram.PhotoSize`]): Photo that will be displayed in the game
             message in chats.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         text (:obj:`str`, optional): Brief description of the game or high scores included in the
@@ -57,7 +57,7 @@ class Game(TelegramObject):
         text_entities (Sequence[:class:`telegram.MessageEntity`], optional): Special entities that
             appear in text, such as usernames, URLs, bot commands, etc.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         animation (:class:`telegram.Animation`, optional): Animation that will be displayed in the
@@ -69,7 +69,7 @@ class Game(TelegramObject):
         photo (tuple[:class:`telegram.PhotoSize`]): Photo that will be displayed in the game
             message in chats.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         text (:obj:`str`): Optional. Brief description of the game or high scores included in the
@@ -81,7 +81,7 @@ class Game(TelegramObject):
             appear in text, such as usernames, URLs, bot commands, etc.
             This tuple is empty if the message does not contain text entities.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         animation (:class:`telegram.Animation`): Optional. Animation that will be displayed in the

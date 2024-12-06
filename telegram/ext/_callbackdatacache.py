@@ -132,7 +132,7 @@ class CallbackDataCache:
 
     .. versionadded:: 13.6
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         To use this class, PTB must be installed via
         ``pip install "python-telegram-bot[callback-data]"``.
 
@@ -179,7 +179,7 @@ class CallbackDataCache:
         Warning:
             This method is not intended to be called by users directly.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             persistent_data (tuple[list[tuple[:obj:`str`, :obj:`float`, \
@@ -199,7 +199,7 @@ class CallbackDataCache:
     def maxsize(self) -> int:
         """:obj:`int`: The maximum size of the cache.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            This property is now read-only.
         """
         return self._maxsize

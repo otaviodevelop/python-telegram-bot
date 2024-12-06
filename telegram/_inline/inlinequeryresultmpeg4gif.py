@@ -72,7 +72,7 @@ class InlineQueryResultMpeg4Gif(InlineQueryResult):
         caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
             |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         reply_markup (:class:`telegram.InlineKeyboardMarkup`, optional): Inline keyboard attached
@@ -107,7 +107,7 @@ class InlineQueryResultMpeg4Gif(InlineQueryResult):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|

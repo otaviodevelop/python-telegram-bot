@@ -37,7 +37,7 @@ class ChatPermissions(TelegramObject):
     :attr:`can_send_videos`, :attr:`can_send_video_notes`, :attr:`can_send_voice_notes`, and
     :attr:`can_manage_topics` are equal.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         :attr:`can_manage_topics` is considered as well when comparing objects of
         this type in terms of equality.
     .. versionchanged:: 20.5
@@ -71,7 +71,7 @@ class ChatPermissions(TelegramObject):
             to create forum topics. If omitted defaults to the value of
             :attr:`can_pin_messages`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         can_send_audios (:obj:`bool`): :obj:`True`, if the user is allowed to send audios.
 
             .. versionadded:: 20.1
@@ -112,7 +112,7 @@ class ChatPermissions(TelegramObject):
             to create forum topics. If omitted defaults to the value of
             :attr:`can_pin_messages`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         can_send_audios (:obj:`bool`): :obj:`True`, if the user is allowed to send audios.
 
             .. versionadded:: 20.1
@@ -215,7 +215,7 @@ class ChatPermissions(TelegramObject):
         set to :obj:`True`. This is e.g. useful when unrestricting a chat member with
         :meth:`telegram.Bot.restrict_chat_member`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         """
         return cls(*(14 * (True,)))
@@ -226,7 +226,7 @@ class ChatPermissions(TelegramObject):
         This method returns an :class:`ChatPermissions` instance
         with all attributes set to :obj:`False`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return cls(*(14 * (False,)))
 

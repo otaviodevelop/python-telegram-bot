@@ -18,7 +18,7 @@
 # along with this program.  If not, see [http://www.gnu.org/licenses/].
 """This module contains a mutable mapping that keeps track of the keys that where accessed.
 
-.. versionadded:: 20.0
+.. versionadded:: 21.8
 
 Warning:
     Contents of this module are intended to be used internally by the library and *not* by the

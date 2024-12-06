@@ -53,7 +53,7 @@ class InlineQueryResultVoice(InlineQueryResult):
         parse_mode (:obj:`str`, optional): |parse_mode|
         caption_entities (Sequence[:class:`telegram.MessageEntity`], optional): |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         voice_duration (:obj:`int`, optional): Recording duration in seconds.
@@ -75,7 +75,7 @@ class InlineQueryResultVoice(InlineQueryResult):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|

@@ -58,7 +58,7 @@ class BaseHandler(Generic[UT, CCT, RT], ABC):
 
     .. seealso:: :wiki:`Types of Handlers <Types-of-Handlers>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * The attribute ``run_async`` is now :paramref:`block`.
         * This class was previously named ``Handler``.

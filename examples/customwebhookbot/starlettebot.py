@@ -4,7 +4,7 @@
 """
 Simple example of a bot that uses a custom webhook setup and handles custom updates.
 For the custom webhook setup, the libraries `starlette` and `uvicorn` are used. Please install
-them as `pip install starlette~=0.20.0 uvicorn~=0.23.2`.
+them as `pip install starlette~=0.21.8 uvicorn~=0.23.2`.
 Note that any other `asyncio` based web server framework can be used for a custom webhook setup
 just as well.
 

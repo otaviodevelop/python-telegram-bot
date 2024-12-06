@@ -67,7 +67,7 @@ class CommandHandler(BaseHandler[Update, CCT, RT]):
         * :any:`Timer Bot <examples.timerbot>`
         * :any:`Error Handler Bot <examples.errorhandlerbot>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * Renamed the attribute ``command`` to :attr:`commands`, which now is always a
           :class:`frozenset`

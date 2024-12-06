@@ -34,7 +34,7 @@ class Defaults:
     .. seealso:: :wiki:`Architecture Overview <Architecture>`,
         :wiki:`Adding Defaults to Your Bot <Adding-defaults-to-your-bot>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         Removed the argument and attribute ``timeout``. Specify default timeout behavior for the
         networking backend directly via :class:`telegram.ext.ApplicationBuilder` instead.
 
@@ -67,7 +67,7 @@ class Defaults:
             :meth:`Application.add_error_handler`. Defaults to :obj:`True`.
         protect_content (:obj:`bool`, optional): |protect_content|
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         link_preview_options (:class:`telegram.LinkPreviewOptions`, optional):
             Link preview generation options for all outgoing messages. Mutually exclusive with
             :paramref:`disable_web_page_preview`.
@@ -385,7 +385,7 @@ class Defaults:
         """:obj:`bool`: Optional. Protects the contents of the sent message from forwarding and
         saving.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return self._protect_content
 

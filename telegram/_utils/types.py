@@ -69,7 +69,7 @@ ReplyMarkup = Union[
 ]
 """Type alias for reply markup objects.
 
-.. versionadded:: 20.0
+.. versionadded:: 21.8
 """
 
 FieldTuple = tuple[str, Union[bytes, IO[bytes]], str]

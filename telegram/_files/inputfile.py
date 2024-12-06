@@ -32,7 +32,7 @@ _DEFAULT_MIME_TYPE = "application/octet-stream"
 class InputFile:
     """This object represents a Telegram InputFile.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * The former attribute ``attach`` was renamed to :attr:`attach_name`.
         * Method ``is_image`` was removed. If you pass :obj:`bytes` to :paramref:`obj` and would
@@ -47,7 +47,7 @@ class InputFile:
                 If :paramref:`obj` is a string, it will be encoded as bytes via
                 :external:obj:`obj.encode('utf-8') <str.encode>`.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 Accept string input.
         filename (:obj:`str`, optional): Filename for this InputFile.
         attach (:obj:`bool`, optional): Pass :obj:`True` if the parameter this file belongs to in

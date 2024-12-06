@@ -99,15 +99,15 @@ class Location(TelegramObject):
     HORIZONTAL_ACCURACY: Final[int] = constants.LocationLimit.HORIZONTAL_ACCURACY
     """:const:`telegram.constants.LocationLimit.HORIZONTAL_ACCURACY`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_HEADING: Final[int] = constants.LocationLimit.MIN_HEADING
     """:const:`telegram.constants.LocationLimit.MIN_HEADING`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_HEADING: Final[int] = constants.LocationLimit.MAX_HEADING
     """:const:`telegram.constants.LocationLimit.MAX_HEADING`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

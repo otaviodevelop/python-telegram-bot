@@ -1,7 +1,7 @@
 telegram.request Module
 =======================
 
-.. versionadded:: 20.0
+.. versionadded:: 21.8
 
 .. toctree::
     :titlesonly:

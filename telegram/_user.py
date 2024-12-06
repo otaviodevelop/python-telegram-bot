@@ -67,7 +67,7 @@ class User(TelegramObject):
     Objects of this class are comparable in terms of equality. Two objects of this class are
     considered equal, if their :attr:`id` is equal.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         The following are now keyword-only arguments in Bot methods:
         ``location``, ``filename``, ``venue``, ``contact``,
         ``{read, write, connect, pool}_timeout`` ``api_kwargs``. Use a named argument for those,
@@ -89,11 +89,11 @@ class User(TelegramObject):
 
         is_premium (:obj:`bool`, optional): :obj:`True`, if this user is a Telegram Premium user.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         added_to_attachment_menu (:obj:`bool`, optional): :obj:`True`, if this user added
             the bot to the attachment menu.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         can_connect_to_business (:obj:`bool`, optional): :obj:`True`,  if the bot can be connected
             to a Telegram Business account to receive its messages. Returned only in
             :meth:`telegram.Bot.get_me`.
@@ -120,11 +120,11 @@ class User(TelegramObject):
         is_premium (:obj:`bool`): Optional. :obj:`True`, if this user is a Telegram
             Premium user.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         added_to_attachment_menu (:obj:`bool`): Optional. :obj:`True`, if this user added
             the bot to the attachment menu.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         can_connect_to_business (:obj:`bool`): Optional. :obj:`True`,  if the bot can be connected
             to a Telegram Business account to receive its messages. Returned only in
             :meth:`telegram.Bot.get_me`.
@@ -1914,7 +1914,7 @@ class User(TelegramObject):
 
         .. seealso:: :meth:`forward_to`, :meth:`forward_messages_from`, :meth:`forward_messages_to`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :class:`telegram.Message`: On success, instance representing the message posted.
@@ -1957,7 +1957,7 @@ class User(TelegramObject):
         .. seealso:: :meth:`forward_from`, :meth:`forward_messages_from`,
             :meth:`forward_messages_to`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :class:`telegram.Message`: On success, instance representing the message posted.
@@ -2157,7 +2157,7 @@ class User(TelegramObject):
         Note:
             |user_chat_id_note|
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :obj:`bool`: On success, :obj:`True` is returned.
@@ -2193,7 +2193,7 @@ class User(TelegramObject):
         Note:
             |user_chat_id_note|
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             :class:`telegram.MenuButton`: On success, the current menu button is returned.

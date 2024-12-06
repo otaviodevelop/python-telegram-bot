@@ -168,7 +168,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         Objects of this class are comparable in terms of equality. Two objects of this class are
         considered equal, if their :attr:`bot` is equal.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * Removed the deprecated methods ``kick_chat_member``, ``kickChatMember``,
           ``get_chat_members_count`` and ``getChatMembersCount``.
@@ -212,7 +212,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             `file URI scheme <https://en.wikipedia.org/wiki/File_URI_scheme>`_.
             Defaults to :obj:`False`.
 
-            .. versionadded:: 20.0.
+            .. versionadded:: 21.8.
 
     .. include:: inclusions/bot_methods.rst
 
@@ -341,7 +341,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         """Customizes how :func:`copy.deepcopy` processes objects of this type. Bots can not
         be pickled and this method will always raise an exception.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Raises:
             :exc:`pickle.PicklingError`
@@ -352,7 +352,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         """Customizes how :func:`copy.deepcopy` processes objects of this type. Bots can not
         be deepcopied and this method will always raise an exception.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Raises:
             :exc:`TypeError`
@@ -392,7 +392,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
     def token(self) -> str:
         """:obj:`str`: Bot's unique authentication token.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return self._token
 
@@ -401,7 +401,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         """:obj:`str`: Telegram Bot API service URL, built from :paramref:`Bot.base_url` and
         :paramref:`Bot.token`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return self._base_url
 
@@ -410,7 +410,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         """:obj:`str`: Telegram Bot API file URL, built from :paramref:`Bot.base_file_url` and
         :paramref:`Bot.token`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return self._base_file_url
 
@@ -418,7 +418,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
     def local_mode(self) -> bool:
         """:obj:`bool`: Whether this bot is running in local mode.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return self._local_mode
 
@@ -429,7 +429,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
     def private_key(self) -> Optional[Any]:
         """Deserialized private key for decryption of telegram passport data.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return self._private_key
 
@@ -750,7 +750,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
 
         .. seealso:: :meth:`shutdown`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         if self._initialized:
             self._LOGGER.debug("This Bot is already initialized.")
@@ -771,7 +771,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
 
         .. seealso:: :meth:`initialize`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         if not self._initialized:
             self._LOGGER.debug("This Bot is already shut down. Returning.")
@@ -940,7 +940,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 entities that appear in message text, which can be specified instead of
                 :paramref:`parse_mode`.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             link_preview_options (:obj:`LinkPreviewOptions`, optional): Link preview generation
                 options for the message. Mutually exclusive with
@@ -959,7 +959,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 keyboard, instructions to remove reply keyboard or to force a reply from the user.
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             reply_parameters (:class:`telegram.ReplyParameters`, optional): |reply_parameters|
 
                 .. versionadded:: 20.8
@@ -1176,7 +1176,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
         Returns:
             :class:`telegram.Message`: On success, the sent Message is returned.
@@ -1311,7 +1311,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionchanged:: 13.2
                    Accept :obj:`bytes` as input.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     File paths as input is also accepted for bots *not* running in
                     :paramref:`~telegram.Bot.local_mode`.
             caption (:obj:`str`, optional): Photo caption (may also be used when resending photos
@@ -1321,7 +1321,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
                 |caption_entities|
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             disable_notification (:obj:`bool`, optional): |disable_notification|
             protect_content (:obj:`bool`, optional): |protect_content|
@@ -1329,7 +1329,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -1338,7 +1338,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             has_spoiler (:obj:`bool`, optional): Pass :obj:`True` if the photo needs to be covered
                 with a spoiler animation.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             reply_parameters (:class:`telegram.ReplyParameters`, optional): |reply_parameters|
 
                 .. versionadded:: 20.8
@@ -1471,7 +1471,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionchanged:: 13.2
                    Accept :obj:`bytes` as input.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     File paths as input is also accepted for bots *not* running in
                     :paramref:`~telegram.Bot.local_mode`.
             caption (:obj:`str`, optional): Audio caption,
@@ -1481,7 +1481,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
                 |caption_entities|
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             duration (:obj:`int`, optional): Duration of sent audio in seconds.
             performer (:obj:`str`, optional): Performer.
@@ -1492,7 +1492,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -1631,7 +1631,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionchanged:: 13.2
                    Accept :obj:`bytes` as input.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     File paths as input is also accepted for bots *not* running in
                     :paramref:`~telegram.Bot.local_mode`.
             caption (:obj:`str`, optional): Document caption (may also be used when resending
@@ -1643,7 +1643,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
                 |caption_entities|
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             disable_notification (:obj:`bool`, optional): |disable_notification|
             protect_content (:obj:`bool`, optional): |protect_content|
@@ -1651,7 +1651,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -1773,7 +1773,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionchanged:: 13.2
                    Accept :obj:`bytes` as input.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     File paths as input is also accepted for bots *not* running in
                     :paramref:`~telegram.Bot.local_mode`.
             emoji (:obj:`str`, optional): Emoji associated with the sticker; only for just
@@ -1786,7 +1786,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -1916,7 +1916,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionchanged:: 13.2
                    Accept :obj:`bytes` as input.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     File paths as input is also accepted for bots *not* running in
                     :paramref:`~telegram.Bot.local_mode`.
             duration (:obj:`int`, optional): Duration of sent video in seconds.
@@ -1929,7 +1929,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
                 |caption_entities|
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             supports_streaming (:obj:`bool`, optional): Pass :obj:`True`, if the uploaded video is
                 suitable for streaming.
@@ -1939,7 +1939,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -1948,7 +1948,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             has_spoiler (:obj:`bool`, optional): Pass :obj:`True` if the video needs to be covered
                 with a spoiler animation.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             thumbnail (:term:`file object` | :obj:`bytes` | :class:`pathlib.Path` | :obj:`str`, \
                 optional): |thumbdocstring|
 
@@ -2089,7 +2089,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionchanged:: 13.2
                    Accept :obj:`bytes` as input.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     File paths as input is also accepted for bots *not* running in
                     :paramref:`~telegram.Bot.local_mode`.
             duration (:obj:`int`, optional): Duration of sent video in seconds.
@@ -2101,7 +2101,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -2251,7 +2251,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
                 |caption_entities|
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             disable_notification (:obj:`bool`, optional): |disable_notification|
             protect_content (:obj:`bool`, optional): |protect_content|
@@ -2259,7 +2259,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -2268,7 +2268,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             has_spoiler (:obj:`bool`, optional): Pass :obj:`True` if the animation needs to be
                 covered with a spoiler animation.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             thumbnail (:term:`file object` | :obj:`bytes` | :class:`pathlib.Path` | :obj:`str`, \
                 optional): |thumbdocstring|
 
@@ -2408,7 +2408,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionchanged:: 13.2
                    Accept :obj:`bytes` as input.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     File paths as input is also accepted for bots *not* running in
                     :paramref:`~telegram.Bot.local_mode`.
             caption (:obj:`str`, optional): Voice message caption,
@@ -2418,7 +2418,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
                 |caption_entities|
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             duration (:obj:`int`, optional): Duration of the voice message in seconds.
             disable_notification (:obj:`bool`, optional): |disable_notification|
@@ -2427,7 +2427,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -2542,7 +2542,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
 
         .. seealso:: :wiki:`Working with Files and Media <Working-with-Files-and-Media>`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Returns a tuple instead of a list.
 
         Args:
@@ -2554,7 +2554,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 :tg-const:`telegram.constants.MediaGroupLimit.MIN_MEDIA_LENGTH`-
                 :tg-const:`telegram.constants.MediaGroupLimit.MAX_MEDIA_LENGTH` items.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             disable_notification (:obj:`bool`, optional): |disable_notification|
             protect_content (:obj:`bool`, optional): |protect_content|
@@ -2562,7 +2562,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_parameters (:class:`telegram.ReplyParameters`, optional): |reply_parameters|
 
@@ -2601,19 +2601,19 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 whole media group.
                 Defaults to :obj:`None`.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             parse_mode (:obj:`str` | :obj:`None`, optional):
                 Parse mode for :paramref:`caption`.
                 See the constants in :class:`telegram.constants.ParseMode` for the
                 available modes.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
                 List of special entities for :paramref:`caption`,
                 which can be specified instead of :paramref:`parse_mode`.
                 Defaults to :obj:`None`.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
         Returns:
             tuple[:class:`telegram.Message`]: An array of the sent Messages.
@@ -2746,7 +2746,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -3058,7 +3058,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -3205,7 +3205,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -3331,7 +3331,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`telegram.InlineKeyboardMarkup`, optional): An object for a new
                 inline keyboard. If empty, one "Play game_title" button will be
@@ -3424,7 +3424,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 :class:`telegram.constants.ChatAction`.
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             business_connection_id (:obj:`str`, optional): |business_id_str|
 
                 .. versionadded:: 21.1
@@ -4108,7 +4108,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 entities that appear in message text, which can be specified instead of
                 :paramref:`parse_mode`.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
 
             link_preview_options (:obj:`LinkPreviewOptions`, optional): Link preview generation
@@ -4210,7 +4210,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
                 |caption_entities|
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             reply_markup (:class:`telegram.InlineKeyboardMarkup`, optional): An object for an
                 inline keyboard.
@@ -4406,7 +4406,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         .. seealso:: :meth:`telegram.ext.Application.run_polling`,
             :meth:`telegram.ext.Updater.start_polling`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Returns a tuple instead of a list.
 
         Args:
@@ -4435,7 +4435,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 updates created before the call to the get_updates, so unwanted updates may be
                 received for a short period of time.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
 
         Returns:
@@ -4577,7 +4577,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 updates created before the call to the set_webhook, so unwanted update
                 may be received for a short period of time.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             drop_pending_updates (:obj:`bool`, optional): Pass :obj:`True` to drop all pending
                 updates.
@@ -4588,7 +4588,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 Only characters ``A-Z``, ``a-z``, ``0-9``, ``_`` and ``-`` are allowed.
                 The header is useful to ensure that the request comes from a webhook set by you.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
         Returns:
             :obj:`bool` On success, :obj:`True` is returned.
@@ -4744,7 +4744,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         """
         Use this method to get a list of administrators in a chat.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Returns a tuple instead of a list.
 
         Args:
@@ -5025,7 +5025,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             closest neighbors on each side. Will also return the top three users if the user and
             his neighbors are not among them. Please note that this behavior is subject to change.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Returns a tuple instead of a list.
 
         Args:
@@ -5139,7 +5139,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 of components (e.g. product price, tax, discount, delivery cost, delivery tax,
                 bonus, etc.). Must contain exactly one item for payment in |tg_stars|.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             max_tip_amount (:obj:`int`, optional): The maximum accepted amount for tips in the
                 *smallest units* of the currency (integer, **not** float/double). For example, for
@@ -5158,7 +5158,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
 
                 .. versionadded:: 13.5
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             start_parameter (:obj:`str`, optional): Unique deep-linking parameter. If left empty,
                 *forwarded copies* of the sent message will have a *Pay* button, allowing
@@ -5200,7 +5200,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`telegram.InlineKeyboardMarkup`, optional): An object for an
                 inline keyboard. If empty, one 'Pay total price' button will be
@@ -5313,7 +5313,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             shipping_options (Sequence[:class:`telegram.ShippingOption`]), optional): Required if
                 :paramref:`ok` is :obj:`True`. A sequence of available shipping options.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             error_message (:obj:`str`, optional): Required if :paramref:`ok` is :obj:`False`.
                 Error message in human readable form that explains why it is impossible to complete
@@ -5414,7 +5414,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         """Use this method to set the result of an interaction with a Web App and send a
         corresponding message on behalf of the user to the chat from which the query originated.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             web_app_query_id (:obj:`str`): Unique identifier for the query to be answered.
@@ -5548,7 +5548,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         an administrator in the chat for this to work and must have the appropriate admin rights.
         Pass :obj:`False` for all boolean parameters to demote a user.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
            The argument ``can_manage_voice_chats`` was renamed to
            :paramref:`can_manage_video_chats` in accordance to Bot API 6.0.
 
@@ -5567,7 +5567,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             can_manage_video_chats (:obj:`bool`, optional): Pass :obj:`True`, if the administrator
                 can manage video chats.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             can_change_info (:obj:`bool`, optional): Pass :obj:`True`, if the administrator can
                 change chat title, photo and other settings.
@@ -5590,7 +5590,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             can_manage_topics (:obj:`bool`, optional): Pass :obj:`True`, if the user is
                 allowed to create, rename, close, and reopen forum topics; for supergroups only.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             can_post_stories (:obj:`bool`, optional): Pass :obj:`True`, if the administrator can
                 post stories to the chat.
 
@@ -5891,7 +5891,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             chat_id (:obj:`int` | :obj:`str`): |chat_id_channel|
             invite_link (:obj:`str` | :class:`telegram.ChatInviteLink`): The invite link to edit.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     Now also accepts :class:`telegram.ChatInviteLink` instances.
             expire_date (:obj:`int` | :obj:`datetime.datetime`, optional): Date when the link will
                 expire.
@@ -5961,7 +5961,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
             chat_id (:obj:`int` | :obj:`str`): |chat_id_channel|
             invite_link (:obj:`str` | :class:`telegram.ChatInviteLink`): The invite link to revoke.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     Now also accepts :class:`telegram.ChatInviteLink` instances.
 
         Returns:
@@ -6090,7 +6090,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 .. versionchanged:: 13.2
                    Accept :obj:`bytes` as input.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     File paths as input is also accepted for bots *not* running in
                     :paramref:`~telegram.Bot.local_mode`.
 
@@ -6471,7 +6471,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
         """
         Use this method to get information about emoji stickers by their identifiers.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Returns a tuple instead of a list.
 
         Args:
@@ -6479,7 +6479,7 @@ class Bot(TelegramObject, contextlib.AbstractAsyncContextManager["Bot"]):
                 At most :tg-const:`telegram.constants.CustomEmojiStickerLimit.\
 CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
 
         Returns:
@@ -6674,7 +6674,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         Use this method to create new sticker set owned by a user.
         The bot will be able to edit the created sticker set thus created.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             The parameter ``contains_masks`` has been removed. Use :paramref:`sticker_type`
             instead.
 
@@ -6713,7 +6713,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
                 :attr:`telegram.Sticker.REGULAR` or :attr:`telegram.Sticker.MASK`, or
                 :attr:`telegram.Sticker.CUSTOM_EMOJI`. By default, a regular sticker set is created
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             needs_repainting (:obj:`bool`, optional): Pass :obj:`True` if stickers in the sticker
                 set must be repainted to the color of text when used in messages, the accent color
@@ -7123,7 +7123,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
             user_id (:obj:`int`): User identifier
             errors (Sequence[:class:`PassportElementError`]): A Sequence describing the errors.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
 
         Returns:
@@ -7194,7 +7194,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
                 :class:`~telegram.InputPollOption` object. Strings are converted to
                 :class:`~telegram.InputPollOption` objects automatically.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
 
                 .. versionchanged:: 21.2
@@ -7219,7 +7219,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
                 special entities that appear in message text, which can be specified instead of
                 :paramref:`explanation_parse_mode`.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             open_period (:obj:`int`, optional): Amount of time in seconds the poll will be active
                 after creation, :tg-const:`telegram.Poll.MIN_OPEN_PERIOD`-
@@ -7239,7 +7239,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -7437,7 +7437,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             reply_parameters (:class:`telegram.ReplyParameters`, optional): |reply_parameters|
 
                 .. versionadded:: 20.8
@@ -7515,7 +7515,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
 
         .. seealso:: :meth:`set_my_default_administrator_rights`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             for_channels (:obj:`bool`, optional): Pass :obj:`True` to get default administrator
@@ -7559,7 +7559,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
 
         .. seealso:: :meth:`get_my_default_administrator_rights`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             rights (:class:`telegram.ChatAdministratorRights`, optional): A
@@ -7605,7 +7605,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
 
         .. seealso:: :meth:`set_my_commands`, :meth:`delete_my_commands`
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Returns a tuple instead of a list.
 
         Args:
@@ -7671,7 +7671,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
                     :obj:`tuple` must correspond to the order of positional arguments to create a
                     :class:`BotCommand` instance.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             scope (:class:`telegram.BotCommandScope`, optional): An object,
                 describing scope of users for which the commands are relevant. Defaults to
@@ -7857,7 +7857,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
             caption_entities (Sequence[:class:`telegram.MessageEntity`], optional):
                 |caption_entities|
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             disable_notification (:obj:`bool`, optional): |disable_notification|
             protect_content (:obj:`bool`, optional): |protect_content|
@@ -7865,7 +7865,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
                 .. versionadded:: 13.10
             message_thread_id (:obj:`int`, optional): |message_thread_id_arg|
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
 
             reply_markup (:class:`InlineKeyboardMarkup` | :class:`ReplyKeyboardMarkup` | \
                 :class:`ReplyKeyboardRemove` | :class:`ForceReply`, optional):
@@ -8040,7 +8040,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         .. seealso:: :meth:`get_chat_menu_button`, :meth:`telegram.Chat.get_menu_button`
             :meth:`telegram.User.get_menu_button`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int`, optional): Unique identifier for the target private chat. If not
@@ -8080,7 +8080,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         .. seealso:: :meth:`set_chat_menu_button`, :meth:`telegram.Chat.set_menu_button`,
             :meth:`telegram.User.set_menu_button`
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int`, optional): Unique identifier for the target private chat. If not
@@ -8136,7 +8136,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
     ) -> str:
         """Use this method to create a link for an invoice.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             business_connection_id (:obj:`str`, optional): |business_id_str|
@@ -8167,7 +8167,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
                 of components (e.g. product price, tax, discount, delivery cost, delivery tax,
                 bonus, etc.). Must contain exactly one item for payments in |tg_stars|.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             subscription_period (:obj:`int` | :class:`datetime.timedelta`, optional): The time the
                 subscription will be active for before the next payment, either as number of
@@ -8191,7 +8191,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
                 amounts can be specified. The suggested tip amounts must be positive, passed in a
                 strictly increased order and must not exceed :paramref:`max_tip_amount`.
 
-                .. versionchanged:: 20.0
+                .. versionchanged:: 21.8
                     |sequenceargs|
             provider_data (:obj:`str` | :obj:`object`, optional): Data about the
                 invoice, which will be shared with the payment provider. A detailed description of
@@ -8273,7 +8273,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         """Use this method to get custom emoji stickers, which can be used as a forum topic
         icon by any user. Requires no parameters.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Returns:
             tuple[:class:`telegram.Sticker`]
@@ -8310,7 +8310,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         an administrator in the chat for this to work and must have
         :paramref:`~telegram.ChatAdministratorRights.can_manage_topics` administrator rights.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8370,7 +8370,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         :paramref:`~telegram.ChatAdministratorRights.can_manage_topics` administrator rights,
         unless it is the creator of the topic.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8424,7 +8424,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         :paramref:`~telegram.ChatAdministratorRights.can_manage_topics` administrator rights,
         unless it is the creator of the topic.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8468,7 +8468,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         :paramref:`~telegram.ChatAdministratorRights.can_manage_topics` administrator rights,
         unless it is the creator of the topic.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8511,7 +8511,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         chat. The bot must be an administrator in the chat for this to work and must have
         :paramref:`~telegram.ChatAdministratorRights.can_delete_messages` administrator rights.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8555,7 +8555,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         :paramref:`~telegram.ChatAdministratorRights.can_pin_messages` administrator rights
         in the supergroup.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8637,7 +8637,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         must be an administrator in the chat for this to work and must have the
         :attr:`~telegram.ChatAdministratorRights.can_manage_topics` administrator rights.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8679,7 +8679,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         be an administrator in the chat for this to work and must have
         :attr:`~telegram.ChatAdministratorRights.can_manage_topics` administrator rights.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8719,7 +8719,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         :attr:`~telegram.ChatAdministratorRights.can_manage_topics` administrator rights.
         The topic will be automatically unhidden if it was hidden.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8759,7 +8759,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         :attr:`~telegram.ChatAdministratorRights.can_manage_topics` administrator rights.
         The topic will be automatically closed if it was open.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|
@@ -8798,7 +8798,7 @@ CUSTOM_EMOJI_IDENTIFIER_LIMIT` custom emoji identifiers can be specified.
         be an administrator in the chat for this to work and must have
         :attr:`~telegram.ChatAdministratorRights.can_manage_topics` administrator rights.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
 
         Args:
             chat_id (:obj:`int` | :obj:`str`): |chat_id_group|

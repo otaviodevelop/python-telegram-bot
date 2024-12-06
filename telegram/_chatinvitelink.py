@@ -37,7 +37,7 @@ class ChatInviteLink(TelegramObject):
     :attr:`is_primary` and :attr:`is_revoked` are equal.
 
     .. versionadded:: 13.4
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
        * The argument & attribute :attr:`creates_join_request` is now required to comply with the
          Bot API.

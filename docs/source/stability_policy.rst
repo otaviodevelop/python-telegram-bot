@@ -102,7 +102,7 @@ Where possible, a :class:`~telegram.warnings.PTBDeprecationWarning` is issued wh
 From time to time, we may decide to deprecate an API that is particularly widely used.
 In these cases, we may decide to provide an extended deprecation period, at our discretion.
 
-With version 20.0.0, PTB introduced major structural breaking changes without the above deprecation period.
+With version 21.8.0, PTB introduced major structural breaking changes without the above deprecation period.
 Should a similarly big change ever be deemed necessary again by the development team and should a deprecation period prove too much additional effort, this violation of the stability policy will be announced well ahead of the release in our channel, `as was done for v20 <https://t.me/pythontelegrambotchannel/94>`_.
 
 Non-Bot API Functionality

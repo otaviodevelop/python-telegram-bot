@@ -120,41 +120,41 @@ class Dice(TelegramObject):
     MIN_VALUE: Final[int] = constants.DiceLimit.MIN_VALUE
     """:const:`telegram.constants.DiceLimit.MIN_VALUE`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     MAX_VALUE_BOWLING: Final[int] = constants.DiceLimit.MAX_VALUE_BOWLING
     """:const:`telegram.constants.DiceLimit.MAX_VALUE_BOWLING`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     MAX_VALUE_DARTS: Final[int] = constants.DiceLimit.MAX_VALUE_DARTS
     """:const:`telegram.constants.DiceLimit.MAX_VALUE_DARTS`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     MAX_VALUE_DICE: Final[int] = constants.DiceLimit.MAX_VALUE_DICE
     """:const:`telegram.constants.DiceLimit.MAX_VALUE_DICE`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     MAX_VALUE_BASKETBALL: Final[int] = constants.DiceLimit.MAX_VALUE_BASKETBALL
     """:const:`telegram.constants.DiceLimit.MAX_VALUE_BASKETBALL`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     MAX_VALUE_FOOTBALL: Final[int] = constants.DiceLimit.MAX_VALUE_FOOTBALL
     """:const:`telegram.constants.DiceLimit.MAX_VALUE_FOOTBALL`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     MAX_VALUE_SLOT_MACHINE: Final[int] = constants.DiceLimit.MAX_VALUE_SLOT_MACHINE
     """:const:`telegram.constants.DiceLimit.MAX_VALUE_SLOT_MACHINE`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

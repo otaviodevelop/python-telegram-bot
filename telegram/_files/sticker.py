@@ -63,7 +63,7 @@ class Sticker(_BaseThumbedMedium):
             :attr:`MASK`, :attr:`CUSTOM_EMOJI`. The type of the sticker is independent from its
             format, which is determined by the fields :attr:`is_animated` and :attr:`is_video`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         emoji (:obj:`str`, optional): Emoji associated with the sticker
         set_name (:obj:`str`, optional): Name of the sticker set to which the sticker belongs.
         mask_position (:class:`telegram.MaskPosition`, optional): For mask stickers, the position
@@ -73,11 +73,11 @@ class Sticker(_BaseThumbedMedium):
         premium_animation (:class:`telegram.File`, optional): For premium regular stickers,
             premium animation for the sticker.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         custom_emoji_id (:obj:`str`, optional): For custom emoji stickers, unique identifier of the
             custom emoji.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         thumbnail (:class:`telegram.PhotoSize`, optional): Sticker thumbnail in the ``.WEBP`` or
             ``.JPG`` format.
 
@@ -104,7 +104,7 @@ class Sticker(_BaseThumbedMedium):
             :attr:`MASK`, :attr:`CUSTOM_EMOJI`. The type of the sticker is independent from its
             format, which is determined by the fields :attr:`is_animated` and :attr:`is_video`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         emoji (:obj:`str`): Optional. Emoji associated with the sticker.
         set_name (:obj:`str`): Optional. Name of the sticker set to which the sticker belongs.
         mask_position (:class:`telegram.MaskPosition`): Optional. For mask stickers, the position
@@ -114,11 +114,11 @@ class Sticker(_BaseThumbedMedium):
         premium_animation (:class:`telegram.File`): Optional. For premium regular stickers,
             premium animation for the sticker.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         custom_emoji_id (:obj:`str`): Optional. For custom emoji stickers, unique identifier of the
             custom emoji.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         thumbnail (:class:`telegram.PhotoSize`): Optional. Sticker thumbnail in the ``.WEBP`` or
             ``.JPG`` format.
 
@@ -225,7 +225,7 @@ class StickerSet(TelegramObject):
         arguments had to be changed. Use keyword arguments to make sure that the arguments are
         passed correctly.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         The parameter ``contains_masks`` has been removed. Use :paramref:`sticker_type` instead.
 
 
@@ -244,14 +244,14 @@ class StickerSet(TelegramObject):
         title (:obj:`str`): Sticker set title.
         stickers (Sequence[:class:`telegram.Sticker`]): List of all set stickers.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         sticker_type (:obj:`str`): Type of stickers in the set, currently one of
             :attr:`telegram.Sticker.REGULAR`, :attr:`telegram.Sticker.MASK`,
             :attr:`telegram.Sticker.CUSTOM_EMOJI`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         thumbnail (:class:`telegram.PhotoSize`, optional): Sticker set thumbnail in the ``.WEBP``,
             ``.TGS``, or ``.WEBM`` format.
 
@@ -262,14 +262,14 @@ class StickerSet(TelegramObject):
         title (:obj:`str`): Sticker set title.
         stickers (tuple[:class:`telegram.Sticker`]): List of all set stickers.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         sticker_type (:obj:`str`): Type of stickers in the set, currently one of
             :attr:`telegram.Sticker.REGULAR`, :attr:`telegram.Sticker.MASK`,
             :attr:`telegram.Sticker.CUSTOM_EMOJI`.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         thumbnail (:class:`telegram.PhotoSize`): Optional. Sticker set thumbnail in the ``.WEBP``,
             ``.TGS``, or ``.WEBM`` format.
 

@@ -72,7 +72,7 @@ class InlineKeyboardButton(TelegramObject):
 
     .. seealso:: :class:`telegram.InlineKeyboardMarkup`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
        :attr:`web_app` is considered as well when comparing objects of this type in terms of
        equality.
 
@@ -107,7 +107,7 @@ class InlineKeyboardButton(TelegramObject):
             private chats between a user and the bot. Not supported for messages sent on behalf of
             a Telegram Business account.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         switch_inline_query (:obj:`str`, optional): If set, pressing the button will prompt the
             user to select one of their chats, open that chat and insert the bot's username and the
             specified inline query in the input field. May be empty, in which case just the bot's
@@ -180,7 +180,7 @@ class InlineKeyboardButton(TelegramObject):
             private chats between a user and the bot. Not supported for messages sent on behalf of
             a Telegram Business account.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         switch_inline_query (:obj:`str`): Optional. If set, pressing the button will prompt the
             user to select one of their chats, open that chat and insert the bot's username and the
             specified inline query in the input field. May be empty, in which case just the bot's
@@ -332,10 +332,10 @@ class InlineKeyboardButton(TelegramObject):
     MIN_CALLBACK_DATA: Final[int] = constants.InlineKeyboardButtonLimit.MIN_CALLBACK_DATA
     """:const:`telegram.constants.InlineKeyboardButtonLimit.MIN_CALLBACK_DATA`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_CALLBACK_DATA: Final[int] = constants.InlineKeyboardButtonLimit.MAX_CALLBACK_DATA
     """:const:`telegram.constants.InlineKeyboardButtonLimit.MAX_CALLBACK_DATA`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

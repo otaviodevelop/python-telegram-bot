@@ -48,7 +48,7 @@ class InputTextMessageContent(InputMessageContent):
         parse_mode (:obj:`str`, optional): |parse_mode|
         entities (Sequence[:class:`telegram.MessageEntity`], optional): |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         link_preview_options (:obj:`LinkPreviewOptions`, optional): Link preview generation
@@ -78,7 +78,7 @@ class InputTextMessageContent(InputMessageContent):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|

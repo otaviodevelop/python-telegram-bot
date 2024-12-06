@@ -43,7 +43,7 @@ class InputMedia(TelegramObject):
     """
     Base class for Telegram InputMedia Objects.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         Added arguments and attributes :attr:`type`, :attr:`media`, :attr:`caption`,
             :attr:`caption_entities`, :paramref:`parse_mode`.
 
@@ -63,7 +63,7 @@ class InputMedia(TelegramObject):
             parsing.
         caption_entities (Sequence[:class:`telegram.MessageEntity`], optional): |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         parse_mode (:obj:`str`, optional): |parse_mode|
@@ -77,7 +77,7 @@ class InputMedia(TelegramObject):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|
@@ -297,7 +297,7 @@ class InputMediaAnimation(InputMedia):
         parse_mode (:obj:`str`, optional): |parse_mode|
         caption_entities (Sequence[:class:`telegram.MessageEntity`], optional): |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         width (:obj:`int`, optional): Animation width.
@@ -306,7 +306,7 @@ class InputMediaAnimation(InputMedia):
         has_spoiler (:obj:`bool`, optional): Pass :obj:`True`, if the animation needs to be covered
             with a spoiler animation.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         thumbnail (:term:`file object` | :obj:`bytes` | :class:`pathlib.Path` | :obj:`str`, \
                 optional): |thumbdocstringnopath|
 
@@ -324,7 +324,7 @@ class InputMediaAnimation(InputMedia):
         parse_mode (:obj:`str`): Optional. The parse mode to use for text formatting.
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|
@@ -334,7 +334,7 @@ class InputMediaAnimation(InputMedia):
         has_spoiler (:obj:`bool`): Optional. :obj:`True`, if the animation is covered with a
             spoiler animation.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         thumbnail (:class:`telegram.InputFile`): Optional. |thumbdocstringbase|
 
             .. versionadded:: 20.2
@@ -420,12 +420,12 @@ class InputMediaPhoto(InputMedia):
         parse_mode (:obj:`str`, optional): |parse_mode|
         caption_entities (Sequence[:class:`telegram.MessageEntity`], optional): |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
         has_spoiler (:obj:`bool`, optional): Pass :obj:`True`, if the photo needs to be covered
             with a spoiler animation.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         show_caption_above_media (:obj:`bool`, optional): Pass |show_cap_above_med|
 
             .. versionadded:: 21.3
@@ -439,14 +439,14 @@ class InputMediaPhoto(InputMedia):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|
         has_spoiler (:obj:`bool`): Optional. :obj:`True`, if the photo is covered with a
             spoiler animation.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         show_caption_above_media (:obj:`bool`): Optional. |show_cap_above_med|
 
             .. versionadded:: 21.3
@@ -520,7 +520,7 @@ class InputMediaVideo(InputMedia):
         parse_mode (:obj:`str`, optional): |parse_mode|
         caption_entities (Sequence[:class:`telegram.MessageEntity`], optional): |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         width (:obj:`int`, optional): Video width.
@@ -531,7 +531,7 @@ class InputMediaVideo(InputMedia):
         has_spoiler (:obj:`bool`, optional): Pass :obj:`True`, if the video needs to be covered
             with a spoiler animation.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         thumbnail (:term:`file object` | :obj:`bytes` | :class:`pathlib.Path` | :obj:`str`, \
                 optional): |thumbdocstringnopath|
 
@@ -549,7 +549,7 @@ class InputMediaVideo(InputMedia):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|
@@ -561,7 +561,7 @@ class InputMediaVideo(InputMedia):
         has_spoiler (:obj:`bool`): Optional. :obj:`True`, if the video is covered with a
             spoiler animation.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
         thumbnail (:class:`telegram.InputFile`): Optional. |thumbdocstringbase|
 
             .. versionadded:: 20.2
@@ -658,7 +658,7 @@ class InputMediaAudio(InputMedia):
         parse_mode (:obj:`str`, optional): |parse_mode|
         caption_entities (Sequence[:class:`telegram.MessageEntity`], optional): |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         duration (:obj:`int`, optional): Duration of the audio in seconds as defined by the sender.
@@ -679,7 +679,7 @@ class InputMediaAudio(InputMedia):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|
@@ -762,7 +762,7 @@ class InputMediaDocument(InputMedia):
         parse_mode (:obj:`str`, optional): |parse_mode|
         caption_entities (Sequence[:class:`telegram.MessageEntity`], optional): |caption_entities|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         disable_content_type_detection (:obj:`bool`, optional): Disables automatic server-side
@@ -782,7 +782,7 @@ class InputMediaDocument(InputMedia):
         parse_mode (:obj:`str`): Optional. |parse_mode|
         caption_entities (tuple[:class:`telegram.MessageEntity`]): Optional. |captionentitiesattr|
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|

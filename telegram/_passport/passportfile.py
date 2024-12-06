@@ -158,7 +158,7 @@ class PassportFile(TelegramObject):
         """Variant of :meth:`telegram.TelegramObject.de_list` that also takes into account
         passport credentials.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
 
            * Returns a tuple instead of a list.
            * Filters out any :obj:`None` values

@@ -64,20 +64,20 @@ class BotCommand(TelegramObject):
     MIN_COMMAND: Final[int] = constants.BotCommandLimit.MIN_COMMAND
     """:const:`telegram.constants.BotCommandLimit.MIN_COMMAND`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_COMMAND: Final[int] = constants.BotCommandLimit.MAX_COMMAND
     """:const:`telegram.constants.BotCommandLimit.MAX_COMMAND`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MIN_DESCRIPTION: Final[int] = constants.BotCommandLimit.MIN_DESCRIPTION
     """:const:`telegram.constants.BotCommandLimit.MIN_DESCRIPTION`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_DESCRIPTION: Final[int] = constants.BotCommandLimit.MAX_DESCRIPTION
     """:const:`telegram.constants.BotCommandLimit.MAX_DESCRIPTION`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

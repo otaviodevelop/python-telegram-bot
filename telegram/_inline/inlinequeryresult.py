@@ -70,10 +70,10 @@ class InlineQueryResult(TelegramObject):
     MIN_ID_LENGTH: Final[int] = constants.InlineQueryResultLimit.MIN_ID_LENGTH
     """:const:`telegram.constants.InlineQueryResultLimit.MIN_ID_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_ID_LENGTH: Final[int] = constants.InlineQueryResultLimit.MAX_ID_LENGTH
     """:const:`telegram.constants.InlineQueryResultLimit.MAX_ID_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

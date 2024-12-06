@@ -42,7 +42,7 @@ class ShippingOption(TelegramObject):
         title (:obj:`str`): Option title.
         prices (Sequence[:class:`telegram.LabeledPrice`]): List of price portions.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
     Attributes:
@@ -50,7 +50,7 @@ class ShippingOption(TelegramObject):
         title (:obj:`str`): Option title.
         prices (tuple[:class:`telegram.LabeledPrice`]): List of price portions.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
     """

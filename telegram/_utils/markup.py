@@ -18,7 +18,7 @@
 # along with this program.  If not, see [http://www.gnu.org/licenses/].
 """This module contains a helper function for Telegram's ReplyMarkups
 
-.. versionchanged:: 20.0
+.. versionchanged:: 21.8
    Previously, the contents of this module were available through the (no longer existing)
    class ``telegram.ReplyMarkup``.
 

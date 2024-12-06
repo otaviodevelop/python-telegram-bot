@@ -39,7 +39,7 @@ class UserProfilePhotos(TelegramObject):
         photos (Sequence[Sequence[:class:`telegram.PhotoSize`]]): Requested profile pictures (in up
             to 4 sizes each).
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
     Attributes:
@@ -47,7 +47,7 @@ class UserProfilePhotos(TelegramObject):
         photos (tuple[tuple[:class:`telegram.PhotoSize`]]): Requested profile pictures (in up to 4
             sizes each).
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
     """

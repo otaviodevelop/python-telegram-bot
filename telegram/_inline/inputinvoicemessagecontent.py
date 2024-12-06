@@ -63,7 +63,7 @@ class InputInvoiceMessageContent(InputMessageContent):
             components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus,
             etc.). Must contain exactly one item for payments in |tg_stars|.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
         max_tip_amount (:obj:`int`, optional): The maximum accepted amount for tips in the
@@ -78,7 +78,7 @@ class InputInvoiceMessageContent(InputMessageContent):
             positive, passed in a strictly increased order and must not exceed
             :attr:`max_tip_amount`.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
 
                 * |tupleclassattrs|
                 * |alwaystuple|
@@ -127,7 +127,7 @@ class InputInvoiceMessageContent(InputMessageContent):
             components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus,
             etc.). Must contain exactly one item for payments in |tg_stars|.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         max_tip_amount (:obj:`int`): Optional. The maximum accepted amount for tips in the
@@ -142,7 +142,7 @@ class InputInvoiceMessageContent(InputMessageContent):
             positive, passed in a strictly increased order and must not exceed
             :attr:`max_tip_amount`.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
         provider_data (:obj:`str`): Optional. An object for data about the invoice,

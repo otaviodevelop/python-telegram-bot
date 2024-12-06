@@ -55,7 +55,7 @@ class InlineQuery(TelegramObject):
     Note:
         In Python :keyword:`from` is a reserved word. Use :paramref:`from_user` instead.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         The following are now keyword-only arguments in Bot methods:
         ``{read, write, connect, pool}_timeout``, :paramref:`answer.api_kwargs`,
         ``auto_pagination``. Use a named argument for those,
@@ -170,7 +170,7 @@ class InlineQuery(TelegramObject):
         For the documentation of the arguments, please see
         :meth:`telegram.Bot.answer_inline_query`.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Raises :class:`ValueError` instead of :class:`TypeError`.
 
         Keyword Args:
@@ -209,20 +209,20 @@ class InlineQuery(TelegramObject):
     MIN_SWITCH_PM_TEXT_LENGTH: Final[int] = constants.InlineQueryLimit.MIN_SWITCH_PM_TEXT_LENGTH
     """:const:`telegram.constants.InlineQueryLimit.MIN_SWITCH_PM_TEXT_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_SWITCH_PM_TEXT_LENGTH: Final[int] = constants.InlineQueryLimit.MAX_SWITCH_PM_TEXT_LENGTH
     """:const:`telegram.constants.InlineQueryLimit.MAX_SWITCH_PM_TEXT_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_OFFSET_LENGTH: Final[int] = constants.InlineQueryLimit.MAX_OFFSET_LENGTH
     """:const:`telegram.constants.InlineQueryLimit.MAX_OFFSET_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_QUERY_LENGTH: Final[int] = constants.InlineQueryLimit.MAX_QUERY_LENGTH
     """:const:`telegram.constants.InlineQueryLimit.MAX_QUERY_LENGTH`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

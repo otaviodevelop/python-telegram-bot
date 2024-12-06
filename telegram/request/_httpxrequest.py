@@ -43,7 +43,7 @@ class HTTPXRequest(BaseRequest):
     """Implementation of :class:`~telegram.request.BaseRequest` using the library
     `httpx <https://www.python-httpx.org>`_.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Args:
         connection_pool_size (:obj:`int`, optional): Number of connections to keep in the
@@ -153,7 +153,7 @@ class HTTPXRequest(BaseRequest):
         http_version: HTTPVersion = "1.1",
         socket_options: Optional[Collection[SocketOpt]] = None,
         proxy: Optional[Union[str, httpx.Proxy, httpx.URL]] = None,
-        media_write_timeout: Optional[float] = 20.0,
+        media_write_timeout: Optional[float] = 21.8,
         httpx_kwargs: Optional[dict[str, Any]] = None,
     ):
         if proxy_url is not None and proxy is not None:

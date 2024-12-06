@@ -18,7 +18,7 @@
 # along with this program.  If not, see [http://www.gnu.org/licenses/].
 """This module contains the DefaultValue class.
 
-.. versionchanged:: 20.0
+.. versionchanged:: 21.8
    Previously, the contents of this module were available through the (no longer existing)
    module ``telegram._utils.helpers``.
 
@@ -128,7 +128,7 @@ DEFAULT_FALSE: DefaultValue[bool] = DefaultValue(False)
 DEFAULT_TRUE: DefaultValue[bool] = DefaultValue(True)
 """:class:`DefaultValue`: Default :obj:`True`
 
-.. versionadded:: 20.0
+.. versionadded:: 21.8
 """
 
 

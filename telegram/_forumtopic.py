@@ -31,7 +31,7 @@ class ForumTopic(TelegramObject):
     considered equal, if their :attr:`message_thread_id`, :attr:`name` and :attr:`icon_color`
     are equal.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Args:
         message_thread_id (:obj:`int`): Unique identifier of the forum topic
@@ -78,7 +78,7 @@ class ForumTopicCreated(TelegramObject):
     Objects of this class are comparable in terms of equality. Two objects of this class are
     considered equal, if their :attr:`name` and :attr:`icon_color` are equal.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Args:
         name (:obj:`str`): Name of the topic
@@ -118,7 +118,7 @@ class ForumTopicClosed(TelegramObject):
     This object represents a service message about a forum topic closed in the chat.
     Currently holds no information.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     __slots__ = ()
@@ -134,7 +134,7 @@ class ForumTopicReopened(TelegramObject):
     This object represents a service message about a forum topic reopened in the chat.
     Currently holds no information.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     __slots__ = ()
@@ -152,7 +152,7 @@ class ForumTopicEdited(TelegramObject):
     Objects of this class are comparable in terms of equality. Two objects of this class are
     considered equal, if their :attr:`name` and :attr:`icon_custom_emoji_id` are equal.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Args:
         name (:obj:`str`, optional): New name of the topic, if it was edited.
@@ -188,7 +188,7 @@ class GeneralForumTopicHidden(TelegramObject):
     This object represents a service message about General forum topic hidden in the chat.
     Currently holds no information.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     __slots__ = ()
@@ -204,7 +204,7 @@ class GeneralForumTopicUnhidden(TelegramObject):
     This object represents a service message about General forum topic unhidden in the chat.
     Currently holds no information.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
 
     __slots__ = ()

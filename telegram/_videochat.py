@@ -37,7 +37,7 @@ class VideoChatStarted(TelegramObject):
     chat started in the chat. Currently holds no information.
 
     .. versionadded:: 13.4
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This class was renamed from ``VoiceChatStarted`` in accordance to Bot API 6.0.
     """
 
@@ -59,7 +59,7 @@ class VideoChatEnded(TelegramObject):
     :attr:`duration` are equal.
 
     .. versionadded:: 13.4
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This class was renamed from ``VoiceChatEnded`` in accordance to Bot API 6.0.
 
     Args:
@@ -93,19 +93,19 @@ class VideoChatParticipantsInvited(TelegramObject):
     Two objects of this class are considered equal, if their :attr:`users` are equal.
 
     .. versionadded:: 13.4
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This class was renamed from ``VoiceChatParticipantsInvited`` in accordance to Bot API 6.0.
 
     Args:
         users (Sequence[:class:`telegram.User`]): New members that were invited to the video chat.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |sequenceclassargs|
 
     Attributes:
         users (tuple[:class:`telegram.User`]): New members that were invited to the video chat.
 
-            .. versionchanged:: 20.0
+            .. versionchanged:: 21.8
                 |tupleclassattrs|
 
     """
@@ -144,7 +144,7 @@ class VideoChatScheduled(TelegramObject):
     Objects of this class are comparable in terms of equality. Two objects of this class are
     considered equal, if their :attr:`start_date` are equal.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         This class was renamed from ``VoiceChatScheduled`` in accordance to Bot API 6.0.
 
     Args:

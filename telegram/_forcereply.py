@@ -36,7 +36,7 @@ class ForceReply(TelegramObject):
     Objects of this class are comparable in terms of equality. Two objects of this class are
     considered equal, if their :attr:`selective` is equal.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         The (undocumented) argument ``force_reply`` was removed and instead :attr:`force_reply`
         is now always set to :obj:`True` as expected by the Bot API.
 
@@ -97,10 +97,10 @@ class ForceReply(TelegramObject):
     MIN_INPUT_FIELD_PLACEHOLDER: Final[int] = constants.ReplyLimit.MIN_INPUT_FIELD_PLACEHOLDER
     """:const:`telegram.constants.ReplyLimit.MIN_INPUT_FIELD_PLACEHOLDER`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """
     MAX_INPUT_FIELD_PLACEHOLDER: Final[int] = constants.ReplyLimit.MAX_INPUT_FIELD_PLACEHOLDER
     """:const:`telegram.constants.ReplyLimit.MAX_INPUT_FIELD_PLACEHOLDER`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
     """

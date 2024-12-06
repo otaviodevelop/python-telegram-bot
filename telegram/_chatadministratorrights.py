@@ -34,9 +34,9 @@ class ChatAdministratorRights(TelegramObject):
     :attr:`can_manage_topics`, :attr:`can_post_stories`, :attr:`can_delete_stories`, and
     :attr:`can_edit_stories` are equal.
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
         :attr:`can_manage_topics` is considered as well when comparing objects of
         this type in terms of equality.
 
@@ -96,7 +96,7 @@ class ChatAdministratorRights(TelegramObject):
         can_manage_topics (:obj:`bool`, optional): :obj:`True`, if the user is allowed
             to create, rename, close, and reopen forum topics; for supergroups only.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
 
     Attributes:
         is_anonymous (:obj:`bool`): :obj:`True`, if the user's presence in the chat is hidden.
@@ -145,7 +145,7 @@ class ChatAdministratorRights(TelegramObject):
         can_manage_topics (:obj:`bool`): Optional. :obj:`True`, if the user is allowed
             to create, rename, close, and reopen forum topics; for supergroups only.
 
-            .. versionadded:: 20.0
+            .. versionadded:: 21.8
     """
 
     __slots__ = (
@@ -232,7 +232,7 @@ class ChatAdministratorRights(TelegramObject):
         :obj:`True`. This is e.g. useful when changing the bot's default administrator rights with
         :meth:`telegram.Bot.set_my_default_administrator_rights`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return cls(*(True,) * len(cls.__slots__))
 
@@ -242,6 +242,6 @@ class ChatAdministratorRights(TelegramObject):
         This method returns the :class:`ChatAdministratorRights` object with all attributes set to
         :obj:`False`.
 
-        .. versionadded:: 20.0
+        .. versionadded:: 21.8
         """
         return cls(*(False,) * len(cls.__slots__))

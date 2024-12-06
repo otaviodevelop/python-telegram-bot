@@ -75,7 +75,7 @@ class Updater(contextlib.AbstractAsyncContextManager["Updater"]):
     .. seealso:: :wiki:`Architecture Overview <Architecture>`,
         :wiki:`Builder Pattern <Builder-Pattern>`
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * Removed argument and attribute ``user_sig_handler``
         * The only arguments and attributes are now :attr:`bot` and :attr:`update_queue` as now
@@ -216,7 +216,7 @@ class Updater(contextlib.AbstractAsyncContextManager["Updater"]):
     ) -> "asyncio.Queue[object]":
         """Starts polling updates from Telegram.
 
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
             Removed the ``clean`` argument in favor of :paramref:`drop_pending_updates`.
 
         Args:
@@ -484,7 +484,7 @@ class Updater(contextlib.AbstractAsyncContextManager["Updater"]):
         .. versionchanged:: 13.4
             :meth:`start_webhook` now *always* calls :meth:`telegram.Bot.set_webhook`, so pass
             ``webhook_url`` instead of calling ``updater.bot.set_webhook(webhook_url)`` manually.
-        .. versionchanged:: 20.0
+        .. versionchanged:: 21.8
 
             * Removed the ``clean`` argument in favor of :paramref:`drop_pending_updates` and
               removed the deprecated argument ``force_event_loop``.
@@ -530,7 +530,7 @@ class Updater(contextlib.AbstractAsyncContextManager["Updater"]):
                 raise a :class:`http.HTTPStatus.FORBIDDEN <http.HTTPStatus>` error if either the
                 header isn't set or it is set to a wrong token.
 
-                .. versionadded:: 20.0
+                .. versionadded:: 21.8
             unix (:class:`pathlib.Path` | :obj:`str` | :class:`socket.socket`, optional): Can be
                 either:
 

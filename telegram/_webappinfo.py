@@ -34,7 +34,7 @@ class WebAppInfo(TelegramObject):
     Examples:
         :any:`Webapp Bot <examples.webappbot>`
 
-    .. versionadded:: 20.0
+    .. versionadded:: 21.8
 
     Args:
         url (:obj:`str`): An HTTPS URL of a Web App to be opened with additional data as specified

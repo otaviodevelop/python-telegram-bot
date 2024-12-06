@@ -76,7 +76,7 @@ class PrefixHandler(BaseHandler[Update, CCT, RT]):
         When setting :paramref:`block` to :obj:`False`, you cannot rely on adding custom
         attributes to :class:`telegram.ext.CallbackContext`. See its docs for more info.
 
-    .. versionchanged:: 20.0
+    .. versionchanged:: 21.8
 
         * :class:`PrefixHandler` is no longer a subclass of :class:`CommandHandler`.
         * Removed the attributes ``command`` and ``prefix``. Instead, the new :attr:`commands`
